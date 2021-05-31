@@ -27,19 +27,19 @@
                 <!-- Brand -->
                 <div class="navbar-brand">
                     <a class="navbar-item" href="/">
-                        <img class="switcher-logo" src="assets/img/finhomes/logos/logo/Copy_of_FinHome.vn_2021_official_logo-removebg.png" alt="">
+                        <img class="switcher-logo" src="assets/img/finhomes/logos/logo/Copy_of_FinHome.vn_2021_official_logo-removebg.png" alt="" />
                     </a>
 
                     <!-- Responsive toggle -->
                     <div class="custom-burger" data-target="">
                         <a id="" class="responsive-btn" href="javascript:void(0);">
                             <span class="menu-toggle">
-                          <span class="icon-box-toggle">
-                              <span class="rotate">
-                                  <i class="icon-line-top"></i>
-                                  <i class="icon-line-center"></i>
-                                  <i class="icon-line-bottom"></i>
-                              </span>
+              <span class="icon-box-toggle">
+                <span class="rotate">
+                  <i class="icon-line-top"></i>
+                  <i class="icon-line-center"></i>
+                  <i class="icon-line-bottom"></i>
+                </span>
                             </span>
                             </span>
                         </a>
@@ -56,9 +56,9 @@
                             Về chúng tôi
                         </a>
                         <!-- Navbar item -->
-                        <a class="navbar-item is-slide" href="http://m.me/finhome.vn">
-                            <img src="assets\img\finhomes\icons\facebook-messenger.svg" alt="http://m.me/finhome.vn">
-                            <span style="margin-left: 5px;">http://m.me/finhome.vn</span>
+                        <a class="navbar-item is-slide" href="http://m.me/finhomes.vn">
+                            <img src="assets\img\finhomes\icons\facebook-messenger.svg" alt="http://m.me/finhome.vn" />
+                            <span style="margin-left: 5px">http://m.me/finhomes.vn</span>
                         </a>
                     </div>
 
@@ -66,7 +66,14 @@
                     <div class="navbar-end">
                         <!-- Signup button -->
                         <div class="navbar-item">
-                            <a id="#signup-btn" href="tel:093-1800-088" class="button button-cta btn-outlined is-bold btn-align primary-btn raised">
+                            <a id="#signup-btn" href="tel:093-1800-088" class="
+                button button-cta
+                btn-outlined
+                is-bold
+                btn-align
+                primary-btn
+                raised
+              ">
                                 Hotline: 093 1800 088
                             </a>
                         </div>
@@ -74,6 +81,7 @@
                 </div>
             </div>
         </nav>
+
         <!--Star Fall-->
         <div class='starfall'>
             <div class='falling-star'></div>
@@ -133,7 +141,7 @@
                         <div class="signup-block is-rounded">
                             <form>
                                 <div class="control">
-                                    <input type="email" class="input" placeholder="Số phone của bạn" />
+                                    <input type="tel" class="input" placeholder="Số phone của bạn" pattern="[0]{1}[0-9]{9}" />
                                     <button type="submit" class="button btn-align primary-btn raised">
                                         Đăng ký
                                     </button>
@@ -293,333 +301,672 @@
     </section>
 
     <!-- form -->
+    <div class="column is-6 is-offset-3 is-hero-caption is-centered">
+        <form action="" class="formInfo">
+            <div class="formInfo__mainTitle title is-3 clean-text">
+                Hãy để FinHomes tư vấn chi tiết cho bạn
+            </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/punycode/1.4.1/punycode.min.js"></script>
-    <script src="https://cdn.jotfor.ms/static/prototype.forms.js" type="text/javascript"></script>
-    <script src="https://cdn.jotfor.ms/static/jotform.forms.js?3.3.25499" type="text/javascript"></script>
+            <div class="formInfo__items">
+                <div class="formInfo__item">
+                    <span class="title is-4">Tên <strong class="required">*</strong> </span>
+                    <div class="formInfo__input">
+                        <input type="text" id="name" required class="input" />
+                    </div>
+                </div>
+
+                <div class="formInfo__item">
+                    <span class="title is-4"
+          >Email <strong class="required">*</strong>
+        </span>
+                    <div class="formInfo__input">
+                        <input type="email" name="name" required class="input" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="formInfo__items">
+                <div class="formInfo__item">
+                    <span class="title is-4"
+          >Phone <strong class="required">*</strong>
+        </span>
+                    <div class="formInfo__input">
+                        <input type="tel" name="tel" required class="input" pattern="[0]{1}[0-9]{9}" />
+                    </div>
+                </div>
+                <div class="formInfo__item">
+                    <span class="title is-4"
+          >Loại bất động sản cho thuê <strong class="required">*</strong>
+        </span>
+
+                    <div class="formInfo__input radio">
+                        <div>
+                            <input type="checkbox" name="apartment" id="apartment" value="apartment" />
+                            <label for="apartment">Căn hộ</label>
+                        </div>
+
+                        <div>
+                            <input type="checkbox" name="house" id="house" value="house" />
+                            <label for="house">Nhà riêng</label>
+                        </div>
+
+                        <div>
+                            <input type="checkbox" name="ground" id="ground" value="ground" />
+                            <label for="ground">Đất nền</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="formInfo__items">
+                <div class="formInfo__item">
+                    <span class="title is-4"
+          >Thành phố <strong class="required">*</strong>
+        </span>
+                    <div class="formInfo__input control has-icons-left">
+                        <div class="select">
+                            <select name="city" id="city" onClick="changeCity()"></select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="formInfo__item">
+                    <span class="title is-4"
+          >Quận/huyện <strong class="required">*</strong>
+        </span>
+                    <div class="formInfo__input control has-icons-left">
+                        <div class="select">
+                            <select name="district" id="district" onClick="changeDistrict()"></select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="formInfo__items">
+                <div class="formInfo__item">
+                    <span class="title is-4"
+          >Phường/xã <strong class="required">*</strong>
+        </span>
+                    <div class="formInfo__input control has-icons-left">
+                        <div class="select">
+                            <select name="ward" id="ward"></select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="formInfo__item">
+                    <span class="title is-4"
+          >Số nhà <strong class="required">*</strong>
+        </span>
+                    <div class="formInfo__input">
+                        <input type="text" id="houseNumber" required class="input" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="formInfo__items">
+                <div class="formInfo__item">
+                    <span class="title is-4"
+          >Giá muốn cho thuê <strong class="required">*</strong>
+        </span>
+                    <div class="formInfo__input">
+                        <input type="number" id="rentPrice" min="1" step="1" required class="input" />
+                    </div>
+                </div>
+            </div>
+            <div class="formInfo__items">
+                <button type="submit" class="button btn-align primary-btn raised">
+                    Gửi
+                </button>
+            </div>
+        </form>
+    </div>
+
     <script type="text/javascript">
-        JotForm.init(function() {
-            if (window.JotForm && JotForm.accessible)
-                $("input_7").setAttribute("tabindex", 0);
-            if (window.JotForm && JotForm.accessible)
-                $("input_16").setAttribute("tabindex", 0);
-            if (window.JotForm && JotForm.accessible)
-                $("input_19").setAttribute("tabindex", 0);
-            if (window.JotForm && JotForm.accessible)
-                $("input_21").setAttribute("tabindex", 0);
-            if (window.JotForm && JotForm.accessible)
-                $("input_23").setAttribute("tabindex", 0);
-            JotForm.setCustomHint("input_23", "Type here...");
-            JotForm.newDefaultTheme = true;
-            JotForm.extendsNewTheme = false;
-            JotForm.newPaymentUIForNewCreatedForms = true;
-            JotForm.newPaymentUI = true;
-            JotForm.alterTexts(undefined);
-            JotForm.clearFieldOnHide = "disable";
-            JotForm.submitError = "jumpToFirstError";
-            /*INIT-END*/
-        });
-    </script>
-    <link type="text/css" media="print" rel="stylesheet" href="https://cdn.jotfor.ms/css/printForm.css?3.3.25499" />
-    <link type="text/css" rel="stylesheet" href="https://cdn.jotfor.ms/themes/CSS/5e6b428acc8c4e222d1beb91.css?themeRevisionID=5f7ed99c2c2c7240ba580251" />
-    <link type="text/css" rel="stylesheet" href="https://cdn.jotfor.ms/css/styles/payment/payment_styles.css?3.3.25499" />
-    <link type="text/css" rel="stylesheet" href="https://cdn.jotfor.ms/css/styles/payment/payment_feature.css?3.3.25499" />
+        const data = [{
+                city: "Hồ Chí Minh",
 
-    <form class="jotform-form" action="https://submit.jotform.com/submit/211431598629058/" method="post" name="form_211431598629058" id="211431598629058" accept-charset="utf-8" autocomplete="on">
-        <input type="hidden" name="formID" value="211431598629058" />
-        <input type="hidden" id="JWTContainer" value="" />
-        <input type="hidden" id="cardinalOrderNumber" value="" />
-        <div role="main" class="form-all">
-            <ul class="form-section page-section">
-                <li id="cid_1" class="form-input-wide" data-type="control_head">
-                    <div class="form-header-group header-large">
-                        <div class="header-text httal htvam">
-                            <h1 id="header_1" class="form-header" data-component="header">
-                                Form
-                            </h1>
-                        </div>
-                    </div>
-                </li>
-                <div class="formGroup">
-                    <li class="form-line jf-required" data-type="control_textbox" id="id_7">
-                        <label class="form-label form-label-top form-label-auto" id="label_7" for="input_7">
-                            Tên
-                            <span class="form-required"> * </span>
-                        </label>
-                        <div id="cid_7" class="form-input-wide jf-required" data-layout="full">
-                            <input type="text" id="input_7" name="q7_ten" data-type="input-textbox" class="form-textbox validate[required]" style="width: 312px" size="312" value="" data-component="textbox" aria-labelledby="label_7" required="" />
-                        </div>
-                    </li>
-                    <li class="form-line jf-required" data-type="control_email" id="id_11">
-                        <label class="form-label form-label-top form-label-auto" id="label_11" for="input_11">
-                            Email
-                            <span class="form-required"> * </span>
-                        </label>
-                        <div id="cid_11" class="form-input-wide jf-required" data-layout="full">
-                            <span class="form-sub-label-container" style="vertical-align: top">
-              <input
-                type="email"
-                id="input_11"
-                name="q11_email"
-                class="form-textbox validate[required, Email]"
-                style="width: 310px"
-                size="310"
-                value=""
-                data-component="email"
-                aria-labelledby="label_11 sublabel_input_11"
-                required=""
-              />
-            </span>
-                        </div>
-                    </li>
-                </div>
-                <div class="formGroup">
-                    <li class="form-line jf-required" data-type="control_phone" id="id_12" data-compound-hint="+84,">
-                        <label class="form-label form-label-top form-label-auto" id="label_12" for="input_12_area">
-                            Phone Number
-                            <span class="form-required"> * </span>
-                        </label>
-                        <div id="cid_12" class="form-input-wide jf-required" data-layout="full">
-                            <div data-wrapper-react="true">
-                                <span
-                class="form-sub-label-container"
-                style="vertical-align: top"
-                data-input-type="areaCode"
-              >
-                <input
-                  type="tel"
-                  id="input_12_area"
-                  name="q12_phoneNumber[area]"
-                  class="form-textbox validate[required]"
-                  value=""
-                  placeholder="+84"
-                  data-component="areaCode"
-                  aria-labelledby="label_12 sublabel_12_area"
-                  required=""
-                />
-                <span class="phone-separate" aria-hidden="true"> - </span>
-                                <label class="form-sub-label" for="input_12_area" id="sublabel_12_area" style="min-height: 13px" aria-hidden="false">
-                                    Area Codes
-                                </label>
-                                </span>
-                                <span
-                class="form-sub-label-container"
-                style="vertical-align: top"
-                data-input-type="phone"
-              >
-                <input
-                  type="tel"
-                  id="input_12_phone"
-                  name="q12_phoneNumber[phone]"
-                  class="form-textbox validate[required]"
-                  value=""
-                  data-component="phone"
-                  aria-labelledby="label_12 sublabel_12_phone"
-                  required=""
-                />
-                <label
-                  class="form-sub-label"
-                  for="input_12_phone"
-                  id="sublabel_12_phone"
-                  style="min-height: 13px"
-                  aria-hidden="false"
-                >
-                  Phone Number
-                </label>
-              </span>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="form-line jf-required" data-type="control_checkbox" id="id_13">
-                        <label class="form-label form-label-top form-label-auto" id="label_13" for="input_13">
-                            Loại cho thuê
-                            <span class="form-required"> * </span>
-                        </label>
-                        <div id="cid_13" class="form-input-wide jf-required" data-layout="full">
-                            <div class="form-single-column" role="group" aria-labelledby="label_13" data-component="checkbox">
-                                <span class="form-checkbox-item" style="clear: left">
-                <span class="dragger-item"> </span>
-                                <input type="checkbox" class="form-checkbox validate[required]" id="input_13_0" name="q13_loaiCho[]" value="Căn hộ" required="" />
-                                <label id="label_input_13_0" for="input_13_0"> Căn hộ </label>
-                                </span>
-                                <span class="form-checkbox-item" style="clear: left">
-                <span class="dragger-item"> </span>
-                                <input type="checkbox" class="form-checkbox validate[required]" id="input_13_1" name="q13_loaiCho[]" value="Nhà riêng" required="" />
-                                <label id="label_input_13_1" for="input_13_1">
-                                    Nhà riêng
-                                </label>
-                                </span>
-                                <span class="form-checkbox-item" style="clear: left">
-                <span class="dragger-item"> </span>
-                                <input type="checkbox" class="form-checkbox validate[required]" id="input_13_2" name="q13_loaiCho[]" value="Đất nền" required="" />
-                                <label id="label_input_13_2" for="input_13_2"> Đất nền </label>
-                                </span>
-                            </div>
-                        </div>
-                    </li>
-                </div>
-                <div class="formGroup">
-                    <li class="form-line jf-required" data-type="control_dropdown" id="id_14">
-                        <label class="form-label form-label-top form-label-auto" id="label_14" for="input_14">
-                            Thành phố
-                            <span class="form-required"> * </span>
-                        </label>
-                        <div id="cid_14" class="form-input-wide jf-required" data-layout="full">
-                            <select class="form-dropdown validate[required]" id="input_14" name="q14_thanhPh" style="width: 310px" data-component="dropdown" required="" aria-labelledby="label_14">
-                                <option value="">Please Select</option>
-                                <option value="Hà Nội">Hà Nội</option>
-                                <option value="Hồ Chí Minh">Hồ Chí Minh</option>
-                            </select>
-                        </div>
-                    </li>
-                    <li class="form-line jf-required" data-type="control_dropdown" id="id_17">
-                        <label class="form-label form-label-top form-label-auto" id="label_17" for="input_17">
-                            Quận / huyện
-                            <span class="form-required"> * </span>
-                        </label>
-                        <div id="cid_17" class="form-input-wide jf-required" data-layout="full">
-                            <select class="form-dropdown validate[required]" id="input_17" name="q17_qun" style="width: 310px" data-component="dropdown" required="" aria-labelledby="label_17">
-                                <option value="">Please Select</option>
-                                <option value=""></option>
-                            </select>
-                        </div>
-                    </li>
-                </div>
-                <div class="formGroup">
-                    <li class="form-line jf-required" data-type="control_dropdown" id="id_18">
-                        <label class="form-label form-label-top form-label-auto" id="label_18" for="input_18">
-                            Phường / xã
-                            <span class="form-required"> * </span>
-                        </label>
-                        <div id="cid_18" class="form-input-wide jf-required" data-layout="full">
-                            <select class="form-dropdown validate[required]" id="input_18" name="q18_phung" style="width: 310px" data-component="dropdown" required="" aria-labelledby="label_18">
-                                <option value="">Please Select</option>
-                                <option value=""></option>
-                            </select>
-                        </div>
-                    </li>
+                districts: [{
+                        district: "Quận 1",
+                        ward: [
+                            "Phường Tân Định",
+                            "Phường Đa Kao",
+                            "Phường Bến Nghé",
+                            "Phường Bến Thành",
+                            "Phường Nguyễn Thái Bình",
+                            "Phường Phạm Ngũ Lão",
+                            "Phường Cầu Ông Lãnh",
+                            "Phường Cô Giang",
+                            "Phường Nguyễn Cư Trinh",
+                            "Phường Cầu Kho",
+                        ],
+                    },
+                    {
+                        district: "Quận 12",
+                        ward: [
+                            "Phường Thạnh Xuân",
+                            "Phường Thạnh Lộc",
+                            "Phường Hiệp Thành",
+                            "Phường Thới An",
+                            "Phường Tân Chánh Hiệp",
+                            "Phường An Phú Đông",
+                            "Phường Tân Thới Hiệp",
+                            "Phường Trung Mỹ Tây",
+                            "Phường Tân Hưng Thuận",
+                            "Phường Đông Hưng Thuận",
+                            "Phường Tân Thới Nhất",
+                        ],
+                    },
+                    {
+                        district: "Thủ Đức",
+                        ward: [
+                            "Phường Linh Trung",
+                            "Phường Bình Chiểu",
+                            "Phường Tam Bình",
+                            "Phường Tam Phú",
+                            "Phường Hiệp Bình Phước",
+                            "Phường Hiệp Bình Chánh",
+                            "Phường Linh Chiểu",
+                            "Phường Linh Tây",
+                            "Phường Linh Đông",
+                            "Phường Bình Thọ",
+                            "Phường Trường Thọ",
+                        ],
+                    },
+                    {
+                        district: "Quận 9",
+                        ward: [
+                            "Phường Long Bình",
+                            "Phường Long Thạnh Mỹ",
+                            "Phường Tân Phú",
+                            "Phường Hiệp Phú",
+                            "Phường Tăng Nhơn Phú A",
+                            "Phường Tăng Nhơn Phú B",
+                            "Phường Phước Long B",
+                            "Phường Phước Long A",
+                            "Phường Trường Thạnh",
+                            "Phường Long Phước",
+                            "Phường Long Trường",
+                            "Phường Phước Bình",
+                            "Phường Phú Hữu",
+                        ],
+                    },
+                    {
+                        district: "Quận Gò Vấp",
+                        ward: [
+                            "Phường 13",
+                            "Phường 17",
+                            "Phường 06",
+                            "Phường 16",
+                            "Phường 12",
+                            "Phường 14",
+                            "Phường 10",
+                            "Phường 05",
+                            "Phường 07",
+                            "Phường 04",
+                            "Phường 01",
+                            "Phường 09",
+                            "Phường 08",
+                            "Phường 11",
+                            "Phường 03",
+                        ],
+                    },
+                    {
+                        district: "Quận Bình Thạnh",
+                        ward: [
+                            "Phường 13",
+                            "Phường 11",
+                            "Phường 27",
+                            "Phường 26",
+                            "Phường 12",
+                            "Phường 25",
+                            "Phường 05",
+                            "Phường 07",
+                            "Phường 24",
+                            "Phường 06",
+                            "Phường 14",
+                            "Phường 15",
+                            "Phường 02",
+                            "Phường 01",
+                            "Phường 03",
+                            "Phường 17",
+                            "Phường 21",
+                            "Phường 22",
+                            "Phường 19",
+                            "Phường 28",
+                        ],
+                    },
+                    {
+                        district: "Quận Tân Bình",
+                        ward: [
+                            "Phường 02",
+                            "Phường 04",
+                            "Phường 12",
+                            "Phường 13",
+                            "Phường 01",
+                            "Phường 03",
+                            "Phường 11",
+                            "Phường 07",
+                            "Phường 05",
+                            "Phường 10",
+                            "Phường 06",
+                            "Phường 08",
+                            "Phường 09",
+                            "Phường 14",
+                            "Phường 15",
+                        ],
+                    },
+                    {
+                        district: "Quận Tân Phú",
+                        ward: [
+                            "Phường Tân Sơn Nhì",
+                            "Phường Tây Thạnh",
+                            "Phường Sơn Kỳ",
+                            "Phường Tân Qúy",
+                            "Phường Tân Thành",
+                            "Phường Phú Thọ Hoà",
+                            "Phường Phú Thạnh",
+                            "Phường Phú Trung",
+                            "Phường Hoà Thạnh",
+                            "Phường Hiệp Tân",
+                            "Phường Tân Thới Hoà",
+                        ],
+                    },
+                    {
+                        district: "Quận Phú Nhuận",
+                        ward: [
+                            "Phường 04",
+                            "Phường 05",
+                            "Phường 09",
+                            "Phường 07",
+                            "Phường 03",
+                            "Phường 01",
+                            "Phường 02",
+                            "Phường 08",
+                            "Phường 15",
+                            "Phường 10",
+                            "Phường 11",
+                            "Phường 17",
+                            "Phường 14",
+                            "Phường 12",
+                            "Phường 13",
+                        ],
+                    },
+                    {
+                        district: "Quận 2",
+                        ward: [
+                            "Phường Thảo Điền",
+                            "Phường An Phú",
+                            "Phường Bình An",
+                            "Phường Bình Trưng Đông",
+                            "Phường Bình Trưng Tây",
+                            "Phường Bình Khánh",
+                            "Phường An Khánh",
+                            "Phường Cát Lái",
+                            "Phường Thạnh Mỹ Lợi",
+                            "Phường An Lợi Đông",
+                            "Phường Thủ Thiêm",
+                        ],
+                    },
+                    {
+                        district: "Quận 3",
+                        ward: [
+                            "Phường 08",
+                            "Phường 07",
+                            "Phường 14",
+                            "Phường 12",
+                            "Phường 11",
+                            "Phường 13",
+                            "Phường 06",
+                            "Phường 09",
+                            "Phường 10",
+                            "Phường 04",
+                            "Phường 05",
+                            "Phường 03",
+                            "Phường 02",
+                            "Phường 01",
+                        ],
+                    },
+                    {
+                        district: "Quận 10",
+                        ward: [
+                            "Phường 15",
+                            "Phường 13",
+                            "Phường 14",
+                            "Phường 12",
+                            "Phường 11",
+                            "Phường 10",
+                            "Phường 09",
+                            "Phường 01",
+                            "Phường 08",
+                            "Phường 02",
+                            "Phường 04",
+                            "Phường 07",
+                            "Phường 05",
+                            "Phường 06",
+                            "Phường 03",
+                        ],
+                    },
+                    {
+                        district: "Quận 11",
+                        ward: [
+                            "Phường 15",
+                            "Phường 05",
+                            "Phường 14",
+                            "Phường 11",
+                            "Phường 03",
+                            "Phường 10",
+                            "Phường 13",
+                            "Phường 08",
+                            "Phường 09",
+                            "Phường 12",
+                            "Phường 07",
+                            "Phường 06",
+                            "Phường 04",
+                            "Phường 01",
+                            "Phường 02",
+                            "Phường 16",
+                        ],
+                    },
+                    {
+                        district: "Quận 4",
+                        ward: [
+                            "Phường 12",
+                            "Phường 13",
+                            "Phường 09",
+                            "Phường 06",
+                            "Phường 08",
+                            "Phường 10",
+                            "Phường 05",
+                            "Phường 18",
+                            "Phường 14",
+                            "Phường 04",
+                            "Phường 03",
+                            "Phường 16",
+                            "Phường 02",
+                            "Phường 15",
+                            "Phường 01",
+                        ],
+                    },
+                    {
+                        district: "Quận 5",
+                        ward: [
+                            "Phường 04",
+                            "Phường 09",
+                            "Phường 03",
+                            "Phường 12",
+                            "Phường 02",
+                            "Phường 08",
+                            "Phường 15",
+                            "Phường 07",
+                            "Phường 01",
+                            "Phường 11",
+                            "Phường 14",
+                            "Phường 05",
+                            "Phường 06",
+                            "Phường 10",
+                            "Phường 13",
+                        ],
+                    },
+                    {
+                        district: "Quận 6",
+                        ward: [
+                            "Phường 14",
+                            "Phường 13",
+                            "Phường 09",
+                            "Phường 06",
+                            "Phường 12",
+                            "Phường 05",
+                            "Phường 11",
+                            "Phường 02",
+                            "Phường 01",
+                            "Phường 04",
+                            "Phường 08",
+                            "Phường 03",
+                            "Phường 07",
+                            "Phường 10",
+                        ],
+                    },
+                    {
+                        district: "Quận 8",
+                        ward: [
+                            "Phường 08",
+                            "Phường 02",
+                            "Phường 01",
+                            "Phường 03",
+                            "Phường 11",
+                            "Phường 09",
+                            "Phường 10",
+                            "Phường 04",
+                            "Phường 13",
+                            "Phường 12",
+                            "Phường 05",
+                            "Phường 14",
+                            "Phường 06",
+                            "Phường 15",
+                            "Phường 16",
+                            "Phường 07",
+                        ],
+                    },
+                    {
+                        district: "Quận Bình Tân",
+                        ward: [
+                            "Phường Bình Hưng Hòa",
+                            "Phường Bình Hưng Hoà A",
+                            "Phường Bình Hưng Hoà B",
+                            "Phường Bình Trị Đông",
+                            "Phường Bình Trị Đông A",
+                            "Phường Bình Trị Đông B",
+                            "Phường Tân Tạo",
+                            "Phường Tân Tạo A",
+                            "Phường An Lạc",
+                            "Phường An Lạc A",
+                        ],
+                    },
+                    {
+                        district: "Quận 7",
+                        ward: [
+                            "Phường Tân Thuận Đông",
+                            "Phường Tân Thuận Tây",
+                            "Phường Tân Kiểng",
+                            "Phường Tân Hưng",
+                            "Phường Bình Thuận",
+                            "Phường Tân Quy",
+                            "Phường Phú Thuận",
+                            "Phường Tân Phú",
+                            "Phường Tân Phong",
+                            "Phường Phú Mỹ",
+                        ],
+                    },
+                    {
+                        district: "Huyện Củ Chi",
+                        ward: [
+                            "Thị trấn Củ Chi",
+                            "Xã Phú Mỹ Hưng",
+                            "Xã An Phú",
+                            "Xã Trung Lập Thượng",
+                            "Xã An Nhơn Tây",
+                            "Xã Nhuận Đức",
+                            "Xã Phạm Văn Cội",
+                            "Xã Phú Hòa Đông",
+                            "Xã Trung Lập Hạ",
+                            "Xã Trung An",
+                            "Xã Phước Thạnh",
+                            "Xã Phước Hiệp",
+                            "Xã Tân An Hội",
+                            "Xã Phước Vĩnh An",
+                            "Xã Thái Mỹ",
+                            "Xã Tân Thạnh Tây",
+                            "Xã Hòa Phú",
+                            "Xã Tân Thạnh Đông",
+                            "Xã Bình Mỹ",
+                            "Xã Tân Phú Trung",
+                            "Xã Tân Thông Hội",
+                        ],
+                    },
+                    {
+                        district: "Huyện Hóc Môn",
+                        ward: [
+                            "Thị trấn Hóc Môn",
+                            "Xã Tân Hiệp",
+                            "Xã Nhị Bình",
+                            "Xã Đông Thạnh",
+                            "Xã Tân Thới Nhì",
+                            "Xã Thới Tam Thôn",
+                            "Xã Xuân Thới Sơn",
+                            "Xã Tân Xuân",
+                            "Xã Xuân Thới Đông",
+                            "Xã Trung Chánh",
+                            "Xã Xuân Thới Thượng",
+                            "Xã Bà Điểm",
+                        ],
+                    },
+                    {
+                        district: "Huyện Bình Chánh",
+                        ward: [
+                            "Thị trấn Tân Túc",
+                            "Xã Phạm Văn Hai",
+                            "Xã Vĩnh Lộc A",
+                            "Xã Vĩnh Lộc B",
+                            "Xã Bình Lợi",
+                            "Xã Lê Minh Xuân",
+                            "Xã Tân Nhựt",
+                            "Xã Tân Kiên",
+                            "Xã Bình Hưng",
+                            "Xã Phong Phú",
+                            "Xã An Phú Tây",
+                            "Xã Hưng Long",
+                            "Xã Đa Phước",
+                            "Xã Tân Quý Tây",
+                            "Xã Bình Chánh",
+                            "Xã Quy Đức",
+                        ],
+                    },
+                    {
+                        district: "Huyện Nhà Bè",
+                        ward: [
+                            "Thị trấn Nhà Bè",
+                            "Xã Phước Kiển",
+                            "Xã Phước Lộc",
+                            "Xã Nhơn Đức",
+                            "Xã Phú Xuân",
+                            "Xã Long Thới",
+                            "Xã Hiệp Phước",
+                        ],
+                    },
+                    {
+                        district: "Huyện Cần Giờ",
+                        ward: [
+                            "Thị trấn Cần Thạnh",
+                            "Xã Bình Khánh",
+                            "Xã Tam Thôn Hiệp",
+                            "Xã An Thới Đông",
+                            "Xã Thạnh An",
+                            "Xã Long Hòa",
+                            "Xã Lý Nhơn",
+                        ],
+                    },
+                ],
+            },
+            {
+                city: "Hà Nội",
 
-                    <li class="form-line" data-type="control_textbox" id="id_16">
-                        <label class="form-label form-label-top form-label-auto" id="label_16" for="input_16">
-                            Địa chỉ
-                        </label>
-                        <div id="cid_16" class="form-input-wide" data-layout="full">
-                            <input type="text" id="input_16" name="q16_diaChi" data-type="input-textbox" class="form-textbox" style="width: 310px" size="310" value="" data-component="textbox" aria-labelledby="label_16" />
-                        </div>
-                    </li>
-                </div>
-                <div class="formGroup">
-                    <li class="form-line" data-type="control_textbox" id="id_19">
-                        <label class="form-label form-label-top form-label-auto" id="label_19" for="input_19">
-                            Số nhà
-                        </label>
-                        <div id="cid_19" class="form-input-wide" data-layout="full">
-                            <input type="text" id="input_19" name="q19_sNha" data-type="input-textbox" class="form-textbox" style="width: 310px" size="310" value="" data-component="textbox" aria-labelledby="label_19" />
-                        </div>
-                    </li>
-                    <li class="form-line" data-type="control_textbox" id="id_21">
-                        <label class="form-label form-label-top form-label-auto" id="label_21" for="input_21">
-                            Số phòng
-                        </label>
-                        <div id="cid_21" class="form-input-wide" data-layout="full">
-                            <input type="text" id="input_21" name="q21_sPhong" data-type="input-textbox" class="form-textbox" style="width: 310px" size="310" value="" data-component="textbox" aria-labelledby="label_21" />
-                        </div>
-                    </li>
-                </div>
-                <li class="form-line" data-type="control_number" id="id_22">
-                    <label class="form-label form-label-top form-label-auto" id="label_22" for="input_22">
-                        Giá muốn cho thuê
-                    </label>
-                    <div id="cid_22" class="form-input-wide" data-layout="full">
-                        <input type="number" id="input_22" name="q22_giaMun" data-type="input-number" class="form-number-input form-textbox" style="width: 310px" size="310" value="" data-component="number" aria-labelledby="label_22" step="any" />
-                    </div>
-                </li>
-                <li class="form-line" data-type="control_textarea" id="id_23">
-                    <label class="form-label form-label-top form-label-auto" id="label_23" for="input_23">
-                        Thông tin thêm
-                    </label>
-                    <div id="cid_23" class="form-input-wide" data-layout="full">
-                        <textarea id="input_23" class="form-textarea" name="q23_thongTin" style="width: 648px; height: 163px" data-component="textarea" aria-labelledby="label_23"></textarea>
-                    </div>
-                </li>
-                <li class="form-line" data-type="control_button" id="id_24">
-                    <div id="cid_24" class="form-input-wide" data-layout="full">
-                        <div data-align="auto" class="
-              form-buttons-wrapper form-buttons-auto
-              jsTest-button-wrapperField
-            ">
-                            <button id="input_24" type="submit" class="
-                form-submit-button
-                submit-button
-                jf-form-buttons
-                jsTest-submitField
-              " data-component="button" data-content="">
-                                Submit
-                            </button>
-                        </div>
-                    </div>
-                </li>
-                <li style="display: none">
-                    Should be Empty:
-                    <input type="text" name="website" value="" />
-                </li>
-            </ul>
-        </div>
-        <script>
-            JotForm.showJotFormPowered = "new_footer";
-        </script>
-        <script>
-            JotForm.poweredByText = "Powered by JotForm";
-        </script>
-        <input type="hidden" class="simple_spc" id="simple_spc" name="simple_spc" value="211431598629058" />
-        <script type="text/javascript">
-            var all_spc = document.querySelectorAll(
-                "form[id='211431598629058'] .si" + "mple" + "_spc"
-            );
-            for (var i = 0; i < all_spc.length; i++) {
-                all_spc[i].value = "211431598629058-211431598629058";
+                districts: [{
+                    district: "quận hoàn kiếm",
+                    ward: [
+                        "Phường 08",
+                        "Phường 02",
+                        "Phường 01",
+                        "Phường 03",
+                        "Phường 11",
+                        "Phường 09",
+                        "Phường 10",
+                        "Phường 04",
+                        "Phường 13",
+                        "Phường 12",
+                        "Phường 05",
+                        "Phường 14",
+                        "Phường 06",
+                        "Phường 15",
+                        "Phường 16",
+                        "Phường 07",
+                    ],
+                }, ],
+            },
+        ];
+
+        const city = document.querySelector('select[name="city"]');
+        const district = document.querySelector('select[name="district"]');
+        const ward = document.querySelector('select[name="ward"]');
+
+        city.innerHTML = `<select name="city" id="city" onClick="changeCity()">
+    <option value="" disabled selected>Chọn thành phố</option>
+    ${data.map((item) => `<option value="${item.city}">${item.city}</option>`)}
+  </select>`;
+
+        const changeCityF = () => {
+            const cityChoose = data.find((element) => element.city === city.value);
+
+            if (city.value !== "") {
+                district.innerHTML = `<select name="district" id="district">
+        <option value="" disabled selected>Chọn quận/huyện</option>
+      ${cityChoose.districts.map(
+        (item) => `<option value="${item.district}">${item.district}</option>`
+      )}
+  </select>`;
             }
-        </script>
-    </form>
-    <script src="https://cdn.jotfor.ms//js/vendor/smoothscroll.min.js?v=3.3.25499"></script>
-    <script src="https://cdn.jotfor.ms//js/errorNavigation.js?v=3.3.25499"></script>
+        };
+
+        const changeDistrictF = () => {
+            if (district.value !== "") {
+                const cityChoose = data.find((element) => element.city === city.value);
+                const districtChoose = cityChoose.districts.find(
+                    (element) => element.district === district.value
+                );
+
+                ward.innerHTML = `<select name="ward" id="ward">
+        <option value="" disabled selected>Chọn phường/xã</option>
+      ${districtChoose.ward.map(
+        (item) => `<option value="${item}">${item}</option>`
+      )}
+  </select>`;
+            }
+        };
+        changeCityF();
+        changeDistrictF();
+
+        const changeCity = () => {
+            changeCityF();
+        };
+
+        const changeDistrict = () => {
+            changeDistrictF();
+        };
+    </script>
 
     <!-- Side footer -->
     <footer class="footer footer-light-left">
         <div class="container">
             <div class="columns is-vcentered">
-                <div class="column is-6">
-                    <div class="mb-20">
+                <div class="column is-2">
+                    <div class="mb-20" style="display: flex; justify-content: center">
                         <img class="small-footer-logo" src="assets\img\finhomes\logos\logo\Copy_of_FinHome.vn_2021_official_logo-removebg.png" alt="" />
                     </div>
-                    <div>
-                        <nav class="level is-mobile mt-20">
-                            <div class="level-left level-social">
-                                <a href="#" class="level-item">
-                                    <span class="icon"><i class="fa fa-facebook"></i></span>
-                                </a>
-                                <a href="#" class="level-item">
-                                    <span class="icon"><i class="fa fa-twitter"></i></span>
-                                </a>
-                                <a href="#" class="level-item">
-                                    <span class="icon"><i class="fa fa-linkedin"></i></span>
-                                </a>
-                                <a href="#" class="level-item">
-                                    <span class="icon"><i class="fa fa-dribbble"></i></span>
-                                </a>
-                                <a href="#" class="level-item">
-                                    <span class="icon"><i class="fa fa-github"></i></span>
-                                </a>
-                            </div>
-                        </nav>
+                    <div style="display: flex; justify-content: center">
+                        <a href=" https://www.facebook.com/FinHomes.vn" class="level-item">
+                            <span class="icon"><i class="fa fa-facebook"></i></span>
+                        </a>
+                        <a href="https://www.linkedin.com/company/finhomevn/" class="level-item">
+                            <span class="icon"><i class="fa fa-linkedin"></i></span>
+                        </a>
                     </div>
                 </div>
                 <div class="column">
                     <div class="footer-nav-right">
                         <a class="footer-nav-link" href="#">Home</a>
                         <a class="footer-nav-link" href="#">Về chúng tôi</a>
-                        <a class="footer-nav-link" href="http://m.me/finhome.vn">
-                            <span style="margin-left: 5px">http://m.me/finhome.vn</span></a>
+                        <a class="footer-nav-link" href="http://m.me/finhomes.vn">
+                            <span style="margin-left: 5px">http://m.me/finhomes.vn</span></a>
                     </div>
                 </div>
             </div>
