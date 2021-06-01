@@ -273,8 +273,7 @@
                             <img src="assets\img\finhomes\images\tiep-can-nhung-goi-ho-tro-tai-chinh-doc-quyen.png" data-base-url="assets/img/graphics/icons/globe" data-extension=".svg" alt="" />
                         </div>
                         <div class="has-text-centered floating-text">
-                            <span class="clean-text"
-              >Tiếp cận những gói hỗ trợ tài chính độc quyền</span>
+                            <span class="clean-text">Tiếp cận những gói hỗ trợ tài chính độc quyền</span>
                         </div>
                     </div>
                     <!-- Floating icon -->
@@ -316,8 +315,7 @@
                 </div>
 
                 <div class="formInfo__item">
-                    <span class="title is-4"
-          >Email <strong class="required">*</strong>
+                    <span class="title is-4">Email <strong class="required">*</strong>
         </span>
                     <div class="formInfo__input">
                         <input type="email" name="name" required class="input" />
@@ -327,16 +325,14 @@
 
             <div class="formInfo__items">
                 <div class="formInfo__item">
-                    <span class="title is-4"
-          >Phone <strong class="required">*</strong>
+                    <span class="title is-4">Phone <strong class="required">*</strong>
         </span>
                     <div class="formInfo__input">
                         <input type="tel" name="tel" required class="input" pattern="[0]{1}[0-9]{9}" />
                     </div>
                 </div>
                 <div class="formInfo__item">
-                    <span class="title is-4"
-          >Loại bất động sản cho thuê <strong class="required">*</strong>
+                    <span class="title is-4">Loại bất động sản cho thuê <strong class="required">*</strong>
         </span>
 
                     <div class="formInfo__input radio">
@@ -360,8 +356,7 @@
 
             <div class="formInfo__items">
                 <div class="formInfo__item">
-                    <span class="title is-4"
-          >Thành phố <strong class="required">*</strong>
+                    <span class="title is-4">Thành phố <strong class="required">*</strong>
         </span>
                     <div class="formInfo__input control has-icons-left">
                         <div class="select">
@@ -371,12 +366,16 @@
                 </div>
 
                 <div class="formInfo__item">
-                    <span class="title is-4"
-          >Quận/huyện <strong class="required">*</strong>
+                    <span class="title is-4">Quận/huyện <strong class="required">*</strong>
         </span>
                     <div class="formInfo__input control has-icons-left">
                         <div class="select">
-                            <select name="district" id="district" onClick="changeDistrict()"></select>
+                            <select name="district" id="district" onClick="changeDistrict()">
+                                <option value="" disabled selected>Chọn quận/huyện</option>
+                                <option value="" disabled>
+                                    Vui lòng chọn thành phố
+                                </option>
+                            </select>
                         </div>
                     </div>
                 </div>
@@ -384,19 +383,22 @@
 
             <div class="formInfo__items">
                 <div class="formInfo__item">
-                    <span class="title is-4"
-          >Phường/xã <strong class="required">*</strong>
+                    <span class="title is-4">Phường/xã <strong class="required">*</strong>
         </span>
                     <div class="formInfo__input control has-icons-left">
                         <div class="select">
-                            <select name="ward" id="ward"></select>
+                            <select name="ward" id="ward">
+                                <option value="" disabled selected>Chọn phường/xã</option>
+                                <option value="" disabled>
+                                    Vui lòng chọn quận/huyện
+                                </option>
+                            </select>
                         </div>
                     </div>
                 </div>
 
                 <div class="formInfo__item">
-                    <span class="title is-4"
-          >Số nhà <strong class="required">*</strong>
+                    <span class="title is-4">Số nhà <strong class="required">*</strong>
         </span>
                     <div class="formInfo__input">
                         <input type="text" id="houseNumber" required class="input" />
@@ -406,8 +408,7 @@
 
             <div class="formInfo__items">
                 <div class="formInfo__item">
-                    <span class="title is-4"
-          >Giá muốn cho thuê <strong class="required">*</strong>
+                    <span class="title is-4">Giá muốn cho thuê <strong class="required">*</strong>
         </span>
                     <div class="formInfo__input">
                         <input type="number" id="rentPrice" min="1" step="1" required class="input" />
@@ -872,7 +873,7 @@
                 city: "Hà Nội",
 
                 districts: [{
-                    district: "quận hoàn kiếm",
+                    district: "Quận Hoàn Kiếm",
                     ward: [
                         "Phường 08",
                         "Phường 02",
@@ -937,6 +938,11 @@
 
         const changeCity = () => {
             changeCityF();
+            changeDistrictF();
+            ward.innerHTML = `<select name="ward" id="ward">
+        <option value="" disabled selected>Chọn phường/xã</option>
+        <option value="" disabled>Vui lòng chọn quận/huyện</option>
+        </select>`;
         };
 
         const changeDistrict = () => {
@@ -973,7 +979,6 @@
         </div>
     </footer>
     <!-- /Side footer -->
-
     <!-- Side navigation -->
     <div class="side-navigation-menu">
         <!-- Categories menu -->
