@@ -360,7 +360,7 @@
         </span>
                     <div class="formInfo__input control has-icons-left">
                         <div class="select">
-                            <select name="city" id="city" onClick="changeCity()"></select>
+                            <select name="city" id="city" onchange="changeCity()"></select>
                         </div>
                     </div>
                 </div>
@@ -370,7 +370,7 @@
         </span>
                     <div class="formInfo__input control has-icons-left">
                         <div class="select">
-                            <select name="district" id="district" onClick="changeDistrict()">
+                            <select name="district" id="district" onchange="changeDistrict()">
                                 <option value="" disabled selected>Chọn quận/huyện</option>
                                 <option value="" disabled>
                                     Vui lòng chọn thành phố
@@ -900,7 +900,7 @@
         const district = document.querySelector('select[name="district"]');
         const ward = document.querySelector('select[name="ward"]');
 
-        city.innerHTML = `<select name="city" id="city" onClick="changeCity()">
+        city.innerHTML = `<select name="city" id="city" onchange="changeCity()">
     <option value="" disabled selected>Chọn thành phố</option>
     ${data.map((item) => `<option value="${item.city}">${item.city}</option>`)}
   </select>`;
