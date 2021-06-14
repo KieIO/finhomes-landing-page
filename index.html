@@ -1,1409 +1,1049 @@
-<!DOCTYPE html>
-<html lang="en">
+---
+layout: default
+title: Home
+---
 
-<head>
-    <!-- Required Meta Tags -->
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+<div id="style-switcher" class="style-switcher visible away notification">
+  <div id="notification__value"></div>
+  <i class="material-icons" onclick="handleCloseNoti()">close</i>
+</div>
 
-    <title>Finnhome :: Home</title>
-    <link rel="icon" type="image/png" href="assets/img/favicon.png" />
+<!-- Hero -->
+<div class="hero is-relative is-fullheight is-app-grey">
+  <!--Nav-->
+  {{> navbar-fade-dark-kit2}}
 
-    <!--Core CSS -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="assets/css/app.css" />
-    <link rel="stylesheet" href="assets/css/core.css" />
-</head>
+  <!--Star Fall-->
+  {{> star-fall}}
 
-<body>
-    <div class="pageloader"></div>
-    <div class="infraloader is-active"></div>
-    <!-- Hero -->
-    <div class="hero is-relative is-fullheight is-app-grey">
-        <!--Nav-->
-        <nav class="navbar navbar-wrapper navbar-default navbar-fade is-transparent">
-            <div class="container">
-                <!-- Brand -->
-                <div class="navbar-brand">
-                    <a class="navbar-item" href="/">
-                        <img class="switcher-logo" src="assets/img/finhomes/logos/logo/Copy_of_FinHome.vn_2021_official_logo-removebg.png" alt="" />
-                    </a>
+  <div class="hero-body">
+    <div class="container">
+      <div class="columns has-text-centered">
+        <!-- Caption -->
+        <div class="column is-8 is-offset-2 is-hero-caption is-centered">
+          <h1 class="title is-1" style="font-size: 2.9rem">
+            Nhanh chóng, Dễ dàng, và Hiệu quả hơn
+          </h1>
+          <h2 class="subtitle is-5 pt-10">
+            FinHomes.vn là nền tảng giúp Chủ sở hữu Bất động sản cho thuê, quản
+            lý, và khai thác bất động sản hiệu quả hơn.
+          </h2>
 
-                    <!-- Responsive toggle -->
-                    <div class="custom-burger" data-target="">
-                        <a id="" class="responsive-btn" href="javascript:void(0);">
-                            <span class="menu-toggle">
-              <span class="icon-box-toggle">
-                <span class="rotate">
-                  <i class="icon-line-top"></i>
-                  <i class="icon-line-center"></i>
-                  <i class="icon-line-bottom"></i>
-                </span>
-                            </span>
-                            </span>
-                        </a>
-                    </div>
-                    <!-- /Responsive toggle -->
-                </div>
-
-                <!-- Navbar menu -->
-                <div class="navbar-menu">
-                    <!-- Navbar Start -->
-                    <div class="navbar-start">
-                        <!-- Navbar item -->
-                        <a class="navbar-item is-slide" href="https://finhome.vn/ve-finhome">
-                            Về chúng tôi
-                        </a>
-                        <!-- Navbar item -->
-                        <a class="navbar-item is-slide" href="http://m.me/finhomes.vn">
-                            <img src="assets\img\finhomes\icons\facebook-messenger.svg" alt="http://m.me/finhome.vn" />
-                            <span style="margin-left: 5px">http://m.me/finhomes.vn</span>
-                        </a>
-                    </div>
-
-                    <!-- Navbar end -->
-                    <div class="navbar-end">
-                        <!-- Signup button -->
-                        <div class="navbar-item">
-                            <a id="#signup-btn" href="tel:093-1800-088" class="
-                button button-cta
-                btn-outlined
-                is-bold
-                btn-align
-                primary-btn
-                raised
-              ">
-                                Hotline: 093 1800 088
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </nav>
-
-        <!--Star Fall-->
-        <div class='starfall'>
-            <div class='falling-star'></div>
-            <div class='falling-star'></div>
-            <div class='falling-star'></div>
-            <div class='falling-star'></div>
-            <div class='falling-star'></div>
-            <div class='falling-star'></div>
-            <div class='falling-star'></div>
-            <div class='falling-star'></div>
-            <div class='falling-star'></div>
-            <div class='falling-star'></div>
-            <div class='falling-star'></div>
-            <div class='falling-star'></div>
-            <div class='falling-star'></div>
-            <div class='falling-star'></div>
-            <div class='falling-star'></div>
-            <div class='falling-star'></div>
-            <div class='falling-star'></div>
-            <div class='falling-star'></div>
-            <div class='falling-star'></div>
-            <div class='falling-star'></div>
-            <div class='falling-star'></div>
-            <div class='falling-star'></div>
-            <div class='falling-star'></div>
-            <div class='falling-star'></div>
-            <div class='falling-star'></div>
-            <div class='falling-star'></div>
-            <div class='falling-star'></div>
-            <div class='falling-star'></div>
-            <div class='falling-star'></div>
-            <div class='falling-star'></div>
-            <div class='falling-star'></div>
-            <div class='falling-star'></div>
-            <div class='falling-star'></div>
-            <div class='falling-star'></div>
-            <div class='falling-star'></div>
-            <div class='falling-star'></div>
-            <div class='falling-star'></div>
-            <div class='falling-star'></div>
-            <div class='falling-star'></div>
-            <div class='falling-star'></div>
-        </div>
-        <div class="hero-body">
-            <div class="container">
-                <div class="columns has-text-centered">
-                    <!-- Caption -->
-                    <div class="column is-8 is-offset-2 is-hero-caption is-centered">
-                        <h1 class="title is-1" style="font-size: 2.9rem">
-                            Nhanh chóng, Dễ dàng, và Hiệu quả hơn
-                        </h1>
-                        <h2 class="subtitle is-5 pt-10">
-                            FinHomes.vn là nền tảng giúp Chủ sở hữu Bất động sản cho thuê, quản
-                            lý, và khai thác bất động sản hiệu quả hơn.
-                        </h2>
-
-                        <div class="signup-block is-rounded">
-                            <form>
-                                <div class="control">
-                                    <input type="tel" class="input" placeholder="Số phone của bạn" pattern="[0]{1}[0-9]{9}" />
-                                    <button type="submit" class="button btn-align primary-btn raised">
-                                        Đăng ký
-                                    </button>
-                                </div>
-                            </form>
-                        </div>
-                        <!-- Hero Mockup -->
-                        <img class="people-mockup-3" src="assets\img\finhomes\compositions\hero-people-5-core.svg" data-base-url="assets/img/graphics/compositions/hero-people-5" data-extension=".svg" alt="" />
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Product -->
-    <div id="product" class="section is-medium is-skewed-sm">
-        <div class="container is-reverse-skewed-sm">
-            <!-- Title -->
-            <div class="section-title-wrapper has-text-centered">
-                <div class="bg-number">1</div>
-                <h2 class="section-title-landing">Cho thuê căn hộ Cực kì Nhanh</h2>
-            </div>
-
-            <div class="content-wrapper">
-                <!-- Icon boxes -->
-                <div class="columns is-vcentered">
-                    <div class="column is-5 is-offset-1 has-text-centered">
-                        <div class="columns is-vcentered has-text-centered is-multiline">
-                            <!-- Icon box -->
-                            <div class="column is-6">
-                                <div class="flex-card icon-card hover-inset">
-                                    <img src="assets\img\finhomes\images\bds-duoc-bao-ve.png" data-base-url="assets/img/graphics/icons/invoice" data-extension=".svg" alt="" />
-                                    <div class="icon-card-text is-clean">BĐS được bảo vệ</div>
-                                </div>
-                            </div>
-                            <!-- Icon box -->
-                            <div class="column is-6">
-                                <div class="flex-card icon-card hover-inset">
-                                    <img src="assets\img\finhomes\images\cho-thue-nhanh-chong.png" data-base-url="assets/img/graphics/icons/gateway" data-extension=".svg" alt="" />
-                                    <div class="icon-card-text is-clean">Cho thuê nhanh chóng</div>
-                                </div>
-                            </div>
-                            <!-- Icon box -->
-                            <div class="column is-6">
-                                <div class="flex-card icon-card hover-inset">
-                                    <img src="assets\img\finhomes\images\doi-tac-tin-cay.png" data-base-url="assets/img/graphics/icons/records" data-extension=".svg" alt="" />
-                                    <div class="icon-card-text is-clean">Đối tác tin cậy</div>
-                                </div>
-                            </div>
-                            <!-- Icon box -->
-                            <div class="column is-6">
-                                <div class="flex-card icon-card hover-inset">
-                                    <img src="assets\img\finhomes\images\hop-dong-minh-bach.png" data-base-url="assets/img/graphics/icons/sync" data-extension=".svg" alt="" />
-                                    <div class="icon-card-text is-clean">Hợp đồng minh bạch</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Feature text -->
-                    <div class="column is-5">
-                        <div class="side-feature-text">
-                            <h2 class="feature-headline is-clean" style="text-align: justify; line-height: 1.5">
-                                Bằng kinh nghiệm thực tiễn, kết hợp với sự trợ giúp của dữ liệu
-                                lớn (big data), FinHomes.vn sẽ giới thiệu những căn hộ cho thuê
-                                phù hợp với nhu cầu và khả năng tài chính của người đi thuê. Do
-                                đó, thời gian cho thuê căn hộ thành công sẽ cực kì nhanh. Chúng
-                                tôi có cam kết thời gian trong một số trường hợp phù hợp với tiêu
-                                chí thẩm định của FinHomes.vn
-                            </h2>
-
-                            <div class="button-wrap">
-                                <a href="tel:093-1800-088" class="button button-cta btn-align raised primary-btn">
-                                    Nhận tư vấn ngay: 093 1800 088
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Slanted feature Section -->
-    <section class="section section-primary is-medium is-skewed-sm is-relative">
-        <div class="container slanted-container is-reverse-skewed-sm">
-            <div class="columns is-vcentered">
-                <!-- Content -->
-                <div class="column is-5">
-                    <div class="side-feature-text">
-                        <h2 class="title is-3 clean-text light-text">
-                            Cho Thuê căn hộ thật dễ dàng
-                        </h2>
-                        <p class="light-text">
-                            Nền tảng FinHomes giúp qui trình quản lý và cho thuê căn hộ hết sức
-                            thuận tiện và dễ dàng.
-                        </p>
-                        <div class="button-wrap">
-                            <a href="tel:093-1800-088" class="button button-cta light-btn btn-outlined is-bold">
-                                Nhận tư vấn ngay: 093 1800 088
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Featured image -->
-                <div class="column is-6 is-offset-1">
-                    <img class="featured-svg" src="assets\img\finhomes\design\drawing-7-green.svg" data-base-url="assets/img/graphics/widgets/mini-widget-4" data-extension=".png" alt="" />
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Values -->
-    <section id="values" class="section section-feature-grey is-medium is-skewed-sm">
-        <div class="container is-reverse-skewed-sm">
-            <!-- Title -->
-            <div class="section-title-wrapper has-text-centered">
-                <div class="bg-number">4</div>
-                <h2 class="section-title-landing">
-                    Giải pháp Sinh lời bền vững giành cho chủ Bất động sản
-                </h2>
-            </div>
-
-            <div class="content-wrapper floating-circles">
-                <div class="columns is-vcentered">
-                    <!-- Floating icon -->
-                    <div class="column is-4">
-                        <div class="floating-circle levitate is-icon-reveal">
-                            <img src="assets\img\finhomes\images\tiep-can-nhung-goi-ho-tro-tai-chinh-doc-quyen.png" data-base-url="assets/img/graphics/icons/globe" data-extension=".svg" alt="" />
-                        </div>
-                        <div class="has-text-centered floating-text">
-                            <span class="clean-text">Tiếp cận những gói hỗ trợ tài chính độc quyền</span>
-                        </div>
-                    </div>
-                    <!-- Floating icon -->
-                    <div class="column is-4">
-                        <div class="floating-circle levitate delay-2 is-icon-reveal">
-                            <img src="assets\img\finhomes\images\nhan-thanh-toan-ngay-1-hang-thang.png" data-base-url="assets/img/graphics/icons/cash" data-extension=".svg" alt="" />
-                        </div>
-                        <div class="has-text-centered floating-text">
-                            <span class="clean-text">Nhận thanh toán ngày 1 hàng tháng</span>
-                        </div>
-                    </div>
-                    <!-- Floating icon -->
-                    <div class="column is-4">
-                        <div class="floating-circle levitate delay-4 is-icon-reveal">
-                            <img src="assets\img\finhomes\images\doanh-thu-ben-vung.png" data-base-url="assets/img/graphics/icons/credit-card" data-extension=".svg" alt="" />
-                        </div>
-                        <div class="has-text-centered floating-text">
-                            <span class="clean-text">Doanh thu bền vững</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- form -->
-    <div class="column is-6 is-offset-3 is-hero-caption is-centered">
-        <form action="" class="formInfo">
-            <div class="formInfo__mainTitle title is-3 clean-text">
-                Hãy để FinHomes tư vấn chi tiết cho bạn
-            </div>
-
-            <div class="formInfo__items">
-                <div class="formInfo__item">
-                    <span class="title is-4">Tên <strong class="required">*</strong> </span>
-                    <div class="formInfo__input">
-                        <input type="text" id="name" required class="input" />
-                    </div>
-                </div>
-
-                <div class="formInfo__item">
-                    <span class="title is-4">Email <strong class="required">*</strong>
-        </span>
-                    <div class="formInfo__input">
-                        <input type="email" name="name" required class="input" />
-                    </div>
-                </div>
-            </div>
-
-            <div class="formInfo__items">
-                <div class="formInfo__item">
-                    <span class="title is-4">Phone <strong class="required">*</strong>
-        </span>
-                    <div class="formInfo__input">
-                        <input type="tel" name="tel" required class="input" pattern="[0]{1}[0-9]{9}" />
-                    </div>
-                </div>
-                <div class="formInfo__item">
-                    <span class="title is-4">Loại bất động sản cho thuê <strong class="required">*</strong>
-        </span>
-
-                    <div class="formInfo__input radio">
-                        <div>
-                            <input type="checkbox" name="apartment" id="apartment" value="apartment" />
-                            <label for="apartment">Căn hộ</label>
-                        </div>
-
-                        <div>
-                            <input type="checkbox" name="house" id="house" value="house" />
-                            <label for="house">Nhà riêng</label>
-                        </div>
-
-                        <div>
-                            <input type="checkbox" name="ground" id="ground" value="ground" />
-                            <label for="ground">Đất nền</label>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="formInfo__items">
-                <div class="formInfo__item">
-                    <span class="title is-4">Thành phố <strong class="required">*</strong>
-        </span>
-                    <div class="formInfo__input control has-icons-left">
-                        <div class="select">
-                            <select name="city" id="city" onchange="changeCity()"></select>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="formInfo__item">
-                    <span class="title is-4">Quận/huyện <strong class="required">*</strong>
-        </span>
-                    <div class="formInfo__input control has-icons-left">
-                        <div class="select">
-                            <select name="district" id="district" onchange="changeDistrict()">
-                                <option value="" disabled selected>Chọn quận/huyện</option>
-                                <option value="" disabled>
-                                    Vui lòng chọn thành phố trước
-                                </option>
-                            </select>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="formInfo__items">
-                <div class="formInfo__item">
-                    <span class="title is-4">Phường/xã <strong class="required">*</strong>
-        </span>
-                    <div class="formInfo__input control has-icons-left">
-                        <div class="select">
-                            <select name="ward" id="ward">
-                                <option value="" disabled selected>Chọn phường/xã</option>
-                                <option value="" disabled>
-                                    Vui lòng chọn thành phố/quận/huyện trước
-                                </option>
-                            </select>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="formInfo__item">
-                    <span class="title is-4">Số nhà <strong class="required">*</strong>
-        </span>
-                    <div class="formInfo__input">
-                        <input type="text" id="houseNumber" required class="input" />
-                    </div>
-                </div>
-            </div>
-
-            <div class="formInfo__items">
-                <div class="formInfo__item">
-                    <span class="title is-4">Giá muốn cho thuê <strong class="required">*</strong>
-        </span>
-                    <div class="formInfo__input">
-                        <input type="number" id="rentPrice" min="1" step="1" required class="input" />
-                    </div>
-                </div>
-            </div>
-            <div class="formInfo__items">
-                <button type="submit" class="button btn-align primary-btn raised">
-                    Gửi
+          <div class="signup-block is-rounded">
+            <form id="getPhoneForm" onsubmit="return validatePhoneForm()">
+              <div class="control">
+                <input
+                  type="tel"
+                  class="input"
+                  placeholder="Số phone của bạn"
+                  pattern="[0]{1}[0-9]{9}"
+                />
+                <button
+                  type="submit"
+                  class="button btn-align primary-btn raised"
+                >
+                  Đăng ký
                 </button>
-            </div>
-        </form>
+              </div>
+            </form>
+          </div>
+          <!-- Hero Mockup -->
+          <img
+            class="people-mockup-3"
+            src="assets\img\finhomes\compositions\hero-people-5-core.svg"
+            data-base-url="assets/img/graphics/compositions/hero-people-5"
+            data-extension=".svg"
+            alt=""
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Product -->
+<div id="product" class="section is-medium is-skewed-sm">
+  <div class="container is-reverse-skewed-sm">
+    <!-- Title -->
+    <div class="section-title-wrapper has-text-centered">
+      <div class="bg-number">1</div>
+      <h2 class="section-title-landing">Cho thuê căn hộ Cực kì Nhanh</h2>
     </div>
 
-    <script type="text/javascript">
-        const data = [{
-                city: "Hồ Chí Minh",
+    <div class="content-wrapper">
+      <!-- Icon boxes -->
+      <div class="columns is-vcentered">
+        <div class="column is-5 is-offset-1 has-text-centered">
+          <div class="columns is-vcentered has-text-centered is-multiline">
+            <!-- Icon box -->
+            <div class="column is-6">
+              <div class="flex-card icon-card hover-inset">
+                <img
+                  src="assets\img\finhomes\images\bds-duoc-bao-ve.png"
+                  data-base-url="assets/img/graphics/icons/invoice"
+                  data-extension=".svg"
+                  alt=""
+                />
+                <div class="icon-card-text is-clean">BĐS được bảo vệ</div>
+              </div>
+            </div>
+            <!-- Icon box -->
+            <div class="column is-6">
+              <div class="flex-card icon-card hover-inset">
+                <img
+                  src="assets\img\finhomes\images\cho-thue-nhanh-chong.png"
+                  data-base-url="assets/img/graphics/icons/gateway"
+                  data-extension=".svg"
+                  alt=""
+                />
+                <div class="icon-card-text is-clean">Cho thuê nhanh chóng</div>
+              </div>
+            </div>
+            <!-- Icon box -->
+            <div class="column is-6">
+              <div class="flex-card icon-card hover-inset">
+                <img
+                  src="assets\img\finhomes\images\doi-tac-tin-cay.png"
+                  data-base-url="assets/img/graphics/icons/records"
+                  data-extension=".svg"
+                  alt=""
+                />
+                <div class="icon-card-text is-clean">Đối tác tin cậy</div>
+              </div>
+            </div>
+            <!-- Icon box -->
+            <div class="column is-6">
+              <div class="flex-card icon-card hover-inset">
+                <img
+                  src="assets\img\finhomes\images\hop-dong-minh-bach.png"
+                  data-base-url="assets/img/graphics/icons/sync"
+                  data-extension=".svg"
+                  alt=""
+                />
+                <div class="icon-card-text is-clean">Hợp đồng minh bạch</div>
+              </div>
+            </div>
+          </div>
+        </div>
 
-                districts: [{
-                        district: "Quận 1",
-                        ward: [
-                            "Phường Tân Định",
-                            "Phường Đa Kao",
-                            "Phường Bến Nghé",
-                            "Phường Bến Thành",
-                            "Phường Nguyễn Thái Bình",
-                            "Phường Phạm Ngũ Lão",
-                            "Phường Cầu Ông Lãnh",
-                            "Phường Cô Giang",
-                            "Phường Nguyễn Cư Trinh",
-                            "Phường Cầu Kho",
-                        ],
-                    },
-                    {
-                        district: "Quận 12",
-                        ward: [
-                            "Phường Thạnh Xuân",
-                            "Phường Thạnh Lộc",
-                            "Phường Hiệp Thành",
-                            "Phường Thới An",
-                            "Phường Tân Chánh Hiệp",
-                            "Phường An Phú Đông",
-                            "Phường Tân Thới Hiệp",
-                            "Phường Trung Mỹ Tây",
-                            "Phường Tân Hưng Thuận",
-                            "Phường Đông Hưng Thuận",
-                            "Phường Tân Thới Nhất",
-                        ],
-                    },
-                    {
-                        district: "Thủ Đức",
-                        ward: [
-                            "Phường Linh Trung",
-                            "Phường Bình Chiểu",
-                            "Phường Tam Bình",
-                            "Phường Tam Phú",
-                            "Phường Hiệp Bình Phước",
-                            "Phường Hiệp Bình Chánh",
-                            "Phường Linh Chiểu",
-                            "Phường Linh Tây",
-                            "Phường Linh Đông",
-                            "Phường Bình Thọ",
-                            "Phường Trường Thọ",
-                        ],
-                    },
-                    {
-                        district: "Quận 9",
-                        ward: [
-                            "Phường Long Bình",
-                            "Phường Long Thạnh Mỹ",
-                            "Phường Tân Phú",
-                            "Phường Hiệp Phú",
-                            "Phường Tăng Nhơn Phú A",
-                            "Phường Tăng Nhơn Phú B",
-                            "Phường Phước Long B",
-                            "Phường Phước Long A",
-                            "Phường Trường Thạnh",
-                            "Phường Long Phước",
-                            "Phường Long Trường",
-                            "Phường Phước Bình",
-                            "Phường Phú Hữu",
-                        ],
-                    },
-                    {
-                        district: "Quận Gò Vấp",
-                        ward: [
-                            "Phường 13",
-                            "Phường 17",
-                            "Phường 06",
-                            "Phường 16",
-                            "Phường 12",
-                            "Phường 14",
-                            "Phường 10",
-                            "Phường 05",
-                            "Phường 07",
-                            "Phường 04",
-                            "Phường 01",
-                            "Phường 09",
-                            "Phường 08",
-                            "Phường 11",
-                            "Phường 03",
-                        ],
-                    },
-                    {
-                        district: "Quận Bình Thạnh",
-                        ward: [
-                            "Phường 13",
-                            "Phường 11",
-                            "Phường 27",
-                            "Phường 26",
-                            "Phường 12",
-                            "Phường 25",
-                            "Phường 05",
-                            "Phường 07",
-                            "Phường 24",
-                            "Phường 06",
-                            "Phường 14",
-                            "Phường 15",
-                            "Phường 02",
-                            "Phường 01",
-                            "Phường 03",
-                            "Phường 17",
-                            "Phường 21",
-                            "Phường 22",
-                            "Phường 19",
-                            "Phường 28",
-                        ],
-                    },
-                    {
-                        district: "Quận Tân Bình",
-                        ward: [
-                            "Phường 02",
-                            "Phường 04",
-                            "Phường 12",
-                            "Phường 13",
-                            "Phường 01",
-                            "Phường 03",
-                            "Phường 11",
-                            "Phường 07",
-                            "Phường 05",
-                            "Phường 10",
-                            "Phường 06",
-                            "Phường 08",
-                            "Phường 09",
-                            "Phường 14",
-                            "Phường 15",
-                        ],
-                    },
-                    {
-                        district: "Quận Tân Phú",
-                        ward: [
-                            "Phường Tân Sơn Nhì",
-                            "Phường Tây Thạnh",
-                            "Phường Sơn Kỳ",
-                            "Phường Tân Qúy",
-                            "Phường Tân Thành",
-                            "Phường Phú Thọ Hoà",
-                            "Phường Phú Thạnh",
-                            "Phường Phú Trung",
-                            "Phường Hoà Thạnh",
-                            "Phường Hiệp Tân",
-                            "Phường Tân Thới Hoà",
-                        ],
-                    },
-                    {
-                        district: "Quận Phú Nhuận",
-                        ward: [
-                            "Phường 04",
-                            "Phường 05",
-                            "Phường 09",
-                            "Phường 07",
-                            "Phường 03",
-                            "Phường 01",
-                            "Phường 02",
-                            "Phường 08",
-                            "Phường 15",
-                            "Phường 10",
-                            "Phường 11",
-                            "Phường 17",
-                            "Phường 14",
-                            "Phường 12",
-                            "Phường 13",
-                        ],
-                    },
-                    {
-                        district: "Quận 2",
-                        ward: [
-                            "Phường Thảo Điền",
-                            "Phường An Phú",
-                            "Phường Bình An",
-                            "Phường Bình Trưng Đông",
-                            "Phường Bình Trưng Tây",
-                            "Phường Bình Khánh",
-                            "Phường An Khánh",
-                            "Phường Cát Lái",
-                            "Phường Thạnh Mỹ Lợi",
-                            "Phường An Lợi Đông",
-                            "Phường Thủ Thiêm",
-                        ],
-                    },
-                    {
-                        district: "Quận 3",
-                        ward: [
-                            "Phường 08",
-                            "Phường 07",
-                            "Phường 14",
-                            "Phường 12",
-                            "Phường 11",
-                            "Phường 13",
-                            "Phường 06",
-                            "Phường 09",
-                            "Phường 10",
-                            "Phường 04",
-                            "Phường 05",
-                            "Phường 03",
-                            "Phường 02",
-                            "Phường 01",
-                        ],
-                    },
-                    {
-                        district: "Quận 10",
-                        ward: [
-                            "Phường 15",
-                            "Phường 13",
-                            "Phường 14",
-                            "Phường 12",
-                            "Phường 11",
-                            "Phường 10",
-                            "Phường 09",
-                            "Phường 01",
-                            "Phường 08",
-                            "Phường 02",
-                            "Phường 04",
-                            "Phường 07",
-                            "Phường 05",
-                            "Phường 06",
-                            "Phường 03",
-                        ],
-                    },
-                    {
-                        district: "Quận 11",
-                        ward: [
-                            "Phường 15",
-                            "Phường 05",
-                            "Phường 14",
-                            "Phường 11",
-                            "Phường 03",
-                            "Phường 10",
-                            "Phường 13",
-                            "Phường 08",
-                            "Phường 09",
-                            "Phường 12",
-                            "Phường 07",
-                            "Phường 06",
-                            "Phường 04",
-                            "Phường 01",
-                            "Phường 02",
-                            "Phường 16",
-                        ],
-                    },
-                    {
-                        district: "Quận 4",
-                        ward: [
-                            "Phường 12",
-                            "Phường 13",
-                            "Phường 09",
-                            "Phường 06",
-                            "Phường 08",
-                            "Phường 10",
-                            "Phường 05",
-                            "Phường 18",
-                            "Phường 14",
-                            "Phường 04",
-                            "Phường 03",
-                            "Phường 16",
-                            "Phường 02",
-                            "Phường 15",
-                            "Phường 01",
-                        ],
-                    },
-                    {
-                        district: "Quận 5",
-                        ward: [
-                            "Phường 04",
-                            "Phường 09",
-                            "Phường 03",
-                            "Phường 12",
-                            "Phường 02",
-                            "Phường 08",
-                            "Phường 15",
-                            "Phường 07",
-                            "Phường 01",
-                            "Phường 11",
-                            "Phường 14",
-                            "Phường 05",
-                            "Phường 06",
-                            "Phường 10",
-                            "Phường 13",
-                        ],
-                    },
-                    {
-                        district: "Quận 6",
-                        ward: [
-                            "Phường 14",
-                            "Phường 13",
-                            "Phường 09",
-                            "Phường 06",
-                            "Phường 12",
-                            "Phường 05",
-                            "Phường 11",
-                            "Phường 02",
-                            "Phường 01",
-                            "Phường 04",
-                            "Phường 08",
-                            "Phường 03",
-                            "Phường 07",
-                            "Phường 10",
-                        ],
-                    },
-                    {
-                        district: "Quận 8",
-                        ward: [
-                            "Phường 08",
-                            "Phường 02",
-                            "Phường 01",
-                            "Phường 03",
-                            "Phường 11",
-                            "Phường 09",
-                            "Phường 10",
-                            "Phường 04",
-                            "Phường 13",
-                            "Phường 12",
-                            "Phường 05",
-                            "Phường 14",
-                            "Phường 06",
-                            "Phường 15",
-                            "Phường 16",
-                            "Phường 07",
-                        ],
-                    },
-                    {
-                        district: "Quận Bình Tân",
-                        ward: [
-                            "Phường Bình Hưng Hòa",
-                            "Phường Bình Hưng Hoà A",
-                            "Phường Bình Hưng Hoà B",
-                            "Phường Bình Trị Đông",
-                            "Phường Bình Trị Đông A",
-                            "Phường Bình Trị Đông B",
-                            "Phường Tân Tạo",
-                            "Phường Tân Tạo A",
-                            "Phường An Lạc",
-                            "Phường An Lạc A",
-                        ],
-                    },
-                    {
-                        district: "Quận 7",
-                        ward: [
-                            "Phường Tân Thuận Đông",
-                            "Phường Tân Thuận Tây",
-                            "Phường Tân Kiểng",
-                            "Phường Tân Hưng",
-                            "Phường Bình Thuận",
-                            "Phường Tân Quy",
-                            "Phường Phú Thuận",
-                            "Phường Tân Phú",
-                            "Phường Tân Phong",
-                            "Phường Phú Mỹ",
-                        ],
-                    },
-                    {
-                        district: "Huyện Củ Chi",
-                        ward: [
-                            "Thị trấn Củ Chi",
-                            "Xã Phú Mỹ Hưng",
-                            "Xã An Phú",
-                            "Xã Trung Lập Thượng",
-                            "Xã An Nhơn Tây",
-                            "Xã Nhuận Đức",
-                            "Xã Phạm Văn Cội",
-                            "Xã Phú Hòa Đông",
-                            "Xã Trung Lập Hạ",
-                            "Xã Trung An",
-                            "Xã Phước Thạnh",
-                            "Xã Phước Hiệp",
-                            "Xã Tân An Hội",
-                            "Xã Phước Vĩnh An",
-                            "Xã Thái Mỹ",
-                            "Xã Tân Thạnh Tây",
-                            "Xã Hòa Phú",
-                            "Xã Tân Thạnh Đông",
-                            "Xã Bình Mỹ",
-                            "Xã Tân Phú Trung",
-                            "Xã Tân Thông Hội",
-                        ],
-                    },
-                    {
-                        district: "Huyện Hóc Môn",
-                        ward: [
-                            "Thị trấn Hóc Môn",
-                            "Xã Tân Hiệp",
-                            "Xã Nhị Bình",
-                            "Xã Đông Thạnh",
-                            "Xã Tân Thới Nhì",
-                            "Xã Thới Tam Thôn",
-                            "Xã Xuân Thới Sơn",
-                            "Xã Tân Xuân",
-                            "Xã Xuân Thới Đông",
-                            "Xã Trung Chánh",
-                            "Xã Xuân Thới Thượng",
-                            "Xã Bà Điểm",
-                        ],
-                    },
-                    {
-                        district: "Huyện Bình Chánh",
-                        ward: [
-                            "Thị trấn Tân Túc",
-                            "Xã Phạm Văn Hai",
-                            "Xã Vĩnh Lộc A",
-                            "Xã Vĩnh Lộc B",
-                            "Xã Bình Lợi",
-                            "Xã Lê Minh Xuân",
-                            "Xã Tân Nhựt",
-                            "Xã Tân Kiên",
-                            "Xã Bình Hưng",
-                            "Xã Phong Phú",
-                            "Xã An Phú Tây",
-                            "Xã Hưng Long",
-                            "Xã Đa Phước",
-                            "Xã Tân Quý Tây",
-                            "Xã Bình Chánh",
-                            "Xã Quy Đức",
-                        ],
-                    },
-                    {
-                        district: "Huyện Nhà Bè",
-                        ward: [
-                            "Thị trấn Nhà Bè",
-                            "Xã Phước Kiển",
-                            "Xã Phước Lộc",
-                            "Xã Nhơn Đức",
-                            "Xã Phú Xuân",
-                            "Xã Long Thới",
-                            "Xã Hiệp Phước",
-                        ],
-                    },
-                    {
-                        district: "Huyện Cần Giờ",
-                        ward: [
-                            "Thị trấn Cần Thạnh",
-                            "Xã Bình Khánh",
-                            "Xã Tam Thôn Hiệp",
-                            "Xã An Thới Đông",
-                            "Xã Thạnh An",
-                            "Xã Long Hòa",
-                            "Xã Lý Nhơn",
-                        ],
-                    },
-                ],
-            },
-            {
-                city: "Hà Nội",
+        <!-- Feature text -->
+        <div class="column is-5">
+          <div class="side-feature-text">
+            <h2
+              class="feature-headline is-clean"
+              style="text-align: justify; line-height: 1.5"
+            >
+              Bằng kinh nghiệm thực tiễn, kết hợp với sự trợ giúp của dữ liệu
+              lớn (big data), FinHomes.vn sẽ giới thiệu những căn hộ cho thuê
+              phù hợp với nhu cầu và khả năng tài chính của người đi thuê. Do
+              đó, thời gian cho thuê căn hộ thành công sẽ cực kì nhanh. Chúng
+              tôi có cam kết thời gian trong một số trường hợp phù hợp với tiêu
+              chí thẩm định của FinHomes.vn
+            </h2>
 
-                districts: [{
-                    district: "Quận Hoàn Kiếm",
-                    ward: [
-                        "Phường 08",
-                        "Phường 02",
-                        "Phường 01",
-                        "Phường 03",
-                        "Phường 11",
-                        "Phường 09",
-                        "Phường 10",
-                        "Phường 04",
-                        "Phường 13",
-                        "Phường 12",
-                        "Phường 05",
-                        "Phường 14",
-                        "Phường 06",
-                        "Phường 15",
-                        "Phường 16",
-                        "Phường 07",
-                    ],
-                }, ],
-            },
-        ];
+            <div class="button-wrap">
+              <a
+                href="tel:093-1800-088"
+                class="button button-cta btn-align raised primary-btn"
+              >
+                Nhận tư vấn ngay: 093 1800 088
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
-        const city = document.querySelector('select[name="city"]');
-        const district = document.querySelector('select[name="district"]');
-        const ward = document.querySelector('select[name="ward"]');
+<!-- Slanted feature Section -->
+<section class="section section-primary is-medium is-skewed-sm is-relative">
+  <div class="container slanted-container is-reverse-skewed-sm">
+    <div class="columns is-vcentered">
+      <!-- Content -->
+      <div class="column is-5">
+        <div class="side-feature-text">
+          <h2 class="title is-3 clean-text light-text">
+            Cho Thuê căn hộ thật dễ dàng
+          </h2>
+          <p class="light-text">
+            Nền tảng FinHomes giúp qui trình quản lý và cho thuê căn hộ hết sức
+            thuận tiện và dễ dàng.
+          </p>
+          <div class="button-wrap">
+            <a
+              href="tel:093-1800-088"
+              class="button button-cta light-btn btn-outlined is-bold"
+            >
+              Nhận tư vấn ngay: 093 1800 088
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- Featured image -->
+      <div class="column is-6 is-offset-1">
+        <img
+          class="featured-svg"
+          src="assets\img\finhomes\design\drawing-7-green.svg"
+          data-base-url="assets/img/graphics/widgets/mini-widget-4"
+          data-extension=".png"
+          alt=""
+        />
+      </div>
+    </div>
+  </div>
+</section>
 
-        city.innerHTML = `<select name="city" id="city" onchange="changeCity()">
+<!-- Values -->
+<section
+  id="values"
+  class="section section-feature-grey is-medium is-skewed-sm"
+>
+  <div class="container is-reverse-skewed-sm">
+    <!-- Title -->
+    <div class="section-title-wrapper has-text-centered">
+      <div class="bg-number">4</div>
+      <h2 class="section-title-landing">
+        Giải pháp Sinh lời bền vững giành cho chủ Bất động sản
+      </h2>
+    </div>
+
+    <div class="content-wrapper floating-circles">
+      <div class="columns is-vcentered">
+        <!-- Floating icon -->
+        <div class="column is-4">
+          <div class="floating-circle levitate is-icon-reveal">
+            <img
+              src="assets\img\finhomes\images\tiep-can-nhung-goi-ho-tro-tai-chinh-doc-quyen.png"
+              data-base-url="assets/img/graphics/icons/globe"
+              data-extension=".svg"
+              alt=""
+            />
+          </div>
+          <div class="has-text-centered floating-text">
+            <span class="clean-text"
+              >Tiếp cận những gói hỗ trợ tài chính độc quyền</span
+            >
+          </div>
+        </div>
+        <!-- Floating icon -->
+        <div class="column is-4">
+          <div class="floating-circle levitate delay-2 is-icon-reveal">
+            <img
+              src="assets\img\finhomes\images\nhan-thanh-toan-ngay-1-hang-thang.png"
+              data-base-url="assets/img/graphics/icons/cash"
+              data-extension=".svg"
+              alt=""
+            />
+          </div>
+          <div class="has-text-centered floating-text">
+            <span class="clean-text">Nhận thanh toán ngày 1 hàng tháng</span>
+          </div>
+        </div>
+        <!-- Floating icon -->
+        <div class="column is-4">
+          <div class="floating-circle levitate delay-4 is-icon-reveal">
+            <img
+              src="assets\img\finhomes\images\doanh-thu-ben-vung.png"
+              data-base-url="assets/img/graphics/icons/credit-card"
+              data-extension=".svg"
+              alt=""
+            />
+          </div>
+          <div class="has-text-centered floating-text">
+            <span class="clean-text">Doanh thu bền vững</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- form -->
+<div class="column is-6 is-offset-3 is-hero-caption is-centered">
+  <form
+    id="getInformationForm"
+    class="formInfo"
+    name="getInformationForm"
+    onsubmit="return validateForm()"
+  >
+    <div class="formInfo__mainTitle title is-3 clean-text">
+      Hãy để FinHomes tư vấn chi tiết cho bạn
+    </div>
+
+    <div class="formInfo__items">
+      <div class="formInfo__item">
+        <span class="title is-4">Tên <strong class="required">*</strong> </span>
+        <div class="formInfo__input">
+          <input type="text" id="name" required class="input" />
+        </div>
+      </div>
+
+      <div class="formInfo__item">
+        <span class="title is-4"
+          >Email <strong class="required">*</strong>
+        </span>
+        <div class="formInfo__input">
+          <input type="email" name="name" required class="input" />
+        </div>
+      </div>
+    </div>
+
+    <div class="formInfo__items">
+      <div class="formInfo__item">
+        <span class="title is-4"
+          >Phone <strong class="required">*</strong>
+        </span>
+        <div class="formInfo__input">
+          <input
+            type="tel"
+            name="tel"
+            required
+            class="input"
+            pattern="[0]{1}[0-9]{9}"
+          />
+        </div>
+      </div>
+      <div class="formInfo__item">
+        <span class="title is-4"
+          >Loại bất động sản cho thuê <strong class="required">*</strong>
+        </span>
+
+        <div class="formInfo__input radio">
+          <div>
+            <input
+              type="checkbox"
+              name="apartment"
+              id="apartment"
+              value="apartment"
+            />
+            <label for="apartment">Căn hộ</label>
+          </div>
+
+          <div>
+            <input type="checkbox" name="house" id="house" value="house" />
+            <label for="house">Nhà riêng</label>
+          </div>
+
+          <div>
+            <input type="checkbox" name="ground" id="ground" value="ground" />
+            <label for="ground">Đất nền</label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="formInfo__items">
+      <div class="formInfo__item">
+        <span class="title is-4"
+          >Thành phố <strong class="required">*</strong>
+        </span>
+        <div class="formInfo__input control has-icons-left">
+          <div class="select">
+            <select name="city" id="city" onchange="changeCity()"></select>
+          </div>
+        </div>
+      </div>
+
+      <div class="formInfo__item">
+        <span class="title is-4"
+          >Quận/huyện <strong class="required">*</strong>
+        </span>
+        <div class="formInfo__input control has-icons-left">
+          <div class="select">
+            <select name="district" id="district" onchange="changeDistrict()">
+              <option value="" disabled selected>Chọn quận/huyện</option>
+              <option value="" disabled>Vui lòng chọn thành phố trước</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="formInfo__items">
+      <div class="formInfo__item">
+        <span class="title is-4"
+          >Phường/xã <strong class="required">*</strong>
+        </span>
+        <div class="formInfo__input control has-icons-left">
+          <div class="select">
+            <select name="ward" id="ward">
+              <option value="" disabled selected>Chọn phường/xã</option>
+              <option value="" disabled>Vui lòng chọn thành phố/quận/huyện trước</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div class="formInfo__item">
+        <span class="title is-4"
+          >Số nhà <strong class="required">*</strong>
+        </span>
+        <div class="formInfo__input">
+          <input type="text" id="houseNumber" required class="input" />
+        </div>
+      </div>
+    </div>
+
+    <div class="formInfo__items">
+      <div class="formInfo__item">
+        <span class="title is-4"
+          >Giá muốn cho thuê (VND) <strong class="required">*</strong>
+        </span>
+        <div class="formInfo__input">
+          <input
+            type="text"
+            id="rentPrice"
+            required
+            class="input"
+            oninput="handleInputRent()"
+          />
+        </div>
+      </div>
+    </div>
+    <div class="formInfo__items">
+      <button type="submit" class="button btn-align primary-btn raised">
+        Gửi
+      </button>
+    </div>
+  </form>
+</div>
+
+<script type="text/javascript">
+  const data = [
+    {
+      city: "Hồ Chí Minh",
+
+      districts: [
+        {
+          district: "Quận 1",
+          ward: [
+            "Phường Tân Định",
+            "Phường Đa Kao",
+            "Phường Bến Nghé",
+            "Phường Bến Thành",
+            "Phường Nguyễn Thái Bình",
+            "Phường Phạm Ngũ Lão",
+            "Phường Cầu Ông Lãnh",
+            "Phường Cô Giang",
+            "Phường Nguyễn Cư Trinh",
+            "Phường Cầu Kho",
+          ],
+        },
+        {
+          district: "Thủ Đức",
+          ward: [
+            "Phường Linh Trung",
+            "Phường Bình Chiểu",
+            "Phường Tam Bình",
+            "Phường Tam Phú",
+            "Phường Hiệp Bình Phước",
+            "Phường Hiệp Bình Chánh",
+            "Phường Linh Chiểu",
+            "Phường Linh Tây",
+            "Phường Linh Đông",
+            "Phường Bình Thọ",
+            "Phường Trường Thọ",
+          ],
+        },
+        {
+          district: "Quận 2",
+          ward: [
+            "Phường Thảo Điền",
+            "Phường An Phú",
+            "Phường Bình An",
+            "Phường Bình Trưng Đông",
+            "Phường Bình Trưng Tây",
+            "Phường Bình Khánh",
+            "Phường An Khánh",
+            "Phường Cát Lái",
+            "Phường Thạnh Mỹ Lợi",
+            "Phường An Lợi Đông",
+            "Phường Thủ Thiêm",
+          ],
+        },
+        {
+          district: "Quận 3",
+          ward: [
+            "Phường 08",
+            "Phường 07",
+            "Phường 14",
+            "Phường 12",
+            "Phường 11",
+            "Phường 13",
+            "Phường 06",
+            "Phường 09",
+            "Phường 10",
+            "Phường 04",
+            "Phường 05",
+            "Phường 03",
+            "Phường 02",
+            "Phường 01",
+          ],
+        },
+        {
+          district: "Quận 4",
+          ward: [
+            "Phường 12",
+            "Phường 13",
+            "Phường 09",
+            "Phường 06",
+            "Phường 08",
+            "Phường 10",
+            "Phường 05",
+            "Phường 18",
+            "Phường 14",
+            "Phường 04",
+            "Phường 03",
+            "Phường 16",
+            "Phường 02",
+            "Phường 15",
+            "Phường 01",
+          ],
+        },
+        {
+          district: "Quận 5",
+          ward: [
+            "Phường 04",
+            "Phường 09",
+            "Phường 03",
+            "Phường 12",
+            "Phường 02",
+            "Phường 08",
+            "Phường 15",
+            "Phường 07",
+            "Phường 01",
+            "Phường 11",
+            "Phường 14",
+            "Phường 05",
+            "Phường 06",
+            "Phường 10",
+            "Phường 13",
+          ],
+        },
+        {
+          district: "Quận 6",
+          ward: [
+            "Phường 14",
+            "Phường 13",
+            "Phường 09",
+            "Phường 06",
+            "Phường 12",
+            "Phường 05",
+            "Phường 11",
+            "Phường 02",
+            "Phường 01",
+            "Phường 04",
+            "Phường 08",
+            "Phường 03",
+            "Phường 07",
+            "Phường 10",
+          ],
+        },
+        {
+          district: "Quận 7",
+          ward: [
+            "Phường Tân Thuận Đông",
+            "Phường Tân Thuận Tây",
+            "Phường Tân Kiểng",
+            "Phường Tân Hưng",
+            "Phường Bình Thuận",
+            "Phường Tân Quy",
+            "Phường Phú Thuận",
+            "Phường Tân Phú",
+            "Phường Tân Phong",
+            "Phường Phú Mỹ",
+          ],
+        },
+        {
+          district: "Quận 8",
+          ward: [
+            "Phường 08",
+            "Phường 02",
+            "Phường 01",
+            "Phường 03",
+            "Phường 11",
+            "Phường 09",
+            "Phường 10",
+            "Phường 04",
+            "Phường 13",
+            "Phường 12",
+            "Phường 05",
+            "Phường 14",
+            "Phường 06",
+            "Phường 15",
+            "Phường 16",
+            "Phường 07",
+          ],
+        },
+        {
+          district: "Quận 9",
+          ward: [
+            "Phường Long Bình",
+            "Phường Long Thạnh Mỹ",
+            "Phường Tân Phú",
+            "Phường Hiệp Phú",
+            "Phường Tăng Nhơn Phú A",
+            "Phường Tăng Nhơn Phú B",
+            "Phường Phước Long B",
+            "Phường Phước Long A",
+            "Phường Trường Thạnh",
+            "Phường Long Phước",
+            "Phường Long Trường",
+            "Phường Phước Bình",
+            "Phường Phú Hữu",
+          ],
+        },
+        {
+          district: "Quận 10",
+          ward: [
+            "Phường 15",
+            "Phường 13",
+            "Phường 14",
+            "Phường 12",
+            "Phường 11",
+            "Phường 10",
+            "Phường 09",
+            "Phường 01",
+            "Phường 08",
+            "Phường 02",
+            "Phường 04",
+            "Phường 07",
+            "Phường 05",
+            "Phường 06",
+            "Phường 03",
+          ],
+        },
+        {
+          district: "Quận 11",
+          ward: [
+            "Phường 15",
+            "Phường 05",
+            "Phường 14",
+            "Phường 11",
+            "Phường 03",
+            "Phường 10",
+            "Phường 13",
+            "Phường 08",
+            "Phường 09",
+            "Phường 12",
+            "Phường 07",
+            "Phường 06",
+            "Phường 04",
+            "Phường 01",
+            "Phường 02",
+            "Phường 16",
+          ],
+        },
+
+        {
+          district: "Quận Tân Bình",
+          ward: [
+            "Phường 02",
+            "Phường 04",
+            "Phường 12",
+            "Phường 13",
+            "Phường 01",
+            "Phường 03",
+            "Phường 11",
+            "Phường 07",
+            "Phường 05",
+            "Phường 10",
+            "Phường 06",
+            "Phường 08",
+            "Phường 09",
+            "Phường 14",
+            "Phường 15",
+          ],
+        },
+
+        {
+          district: "Quận Tân Phú",
+          ward: [
+            "Phường Tân Sơn Nhì",
+            "Phường Tây Thạnh",
+            "Phường Sơn Kỳ",
+            "Phường Tân Qúy",
+            "Phường Tân Thành",
+            "Phường Phú Thọ Hoà",
+            "Phường Phú Thạnh",
+            "Phường Phú Trung",
+            "Phường Hoà Thạnh",
+            "Phường Hiệp Tân",
+            "Phường Tân Thới Hoà",
+          ],
+        },
+        {
+          district: "Quận Bình Thạnh",
+          ward: [
+            "Phường 13",
+            "Phường 11",
+            "Phường 27",
+            "Phường 26",
+            "Phường 12",
+            "Phường 25",
+            "Phường 05",
+            "Phường 07",
+            "Phường 24",
+            "Phường 06",
+            "Phường 14",
+            "Phường 15",
+            "Phường 02",
+            "Phường 01",
+            "Phường 03",
+            "Phường 17",
+            "Phường 21",
+            "Phường 22",
+            "Phường 19",
+            "Phường 28",
+          ],
+        },
+        {
+          district: "Quận Phú Nhuận",
+          ward: [
+            "Phường 04",
+            "Phường 05",
+            "Phường 09",
+            "Phường 07",
+            "Phường 03",
+            "Phường 01",
+            "Phường 02",
+            "Phường 08",
+            "Phường 15",
+            "Phường 10",
+            "Phường 11",
+            "Phường 17",
+            "Phường 14",
+            "Phường 12",
+            "Phường 13",
+          ],
+        },
+        {
+          district: "Quận Gò Vấp",
+          ward: [
+            "Phường 13",
+            "Phường 17",
+            "Phường 06",
+            "Phường 16",
+            "Phường 12",
+            "Phường 14",
+            "Phường 10",
+            "Phường 05",
+            "Phường 07",
+            "Phường 04",
+            "Phường 01",
+            "Phường 09",
+            "Phường 08",
+            "Phường 11",
+            "Phường 03",
+          ],
+        },
+        {
+          district: "Huyện Nhà Bè",
+          ward: [
+            "Thị trấn Nhà Bè",
+            "Xã Phước Kiển",
+            "Xã Phước Lộc",
+            "Xã Nhơn Đức",
+            "Xã Phú Xuân",
+            "Xã Long Thới",
+            "Xã Hiệp Phước",
+          ],
+        },
+        {
+          district: "Huyện Hóc Môn",
+          ward: [
+            "Thị trấn Hóc Môn",
+            "Xã Tân Hiệp",
+            "Xã Nhị Bình",
+            "Xã Đông Thạnh",
+            "Xã Tân Thới Nhì",
+            "Xã Thới Tam Thôn",
+            "Xã Xuân Thới Sơn",
+            "Xã Tân Xuân",
+            "Xã Xuân Thới Đông",
+            "Xã Trung Chánh",
+            "Xã Xuân Thới Thượng",
+            "Xã Bà Điểm",
+          ],
+        },
+        {
+          district: "Quận Bình Tân",
+          ward: [
+            "Phường Bình Hưng Hòa",
+            "Phường Bình Hưng Hoà A",
+            "Phường Bình Hưng Hoà B",
+            "Phường Bình Trị Đông",
+            "Phường Bình Trị Đông A",
+            "Phường Bình Trị Đông B",
+            "Phường Tân Tạo",
+            "Phường Tân Tạo A",
+            "Phường An Lạc",
+            "Phường An Lạc A",
+          ],
+        },
+        {
+          district: "Quận 12",
+          ward: [
+            "Phường Thạnh Xuân",
+            "Phường Thạnh Lộc",
+            "Phường Hiệp Thành",
+            "Phường Thới An",
+            "Phường Tân Chánh Hiệp",
+            "Phường An Phú Đông",
+            "Phường Tân Thới Hiệp",
+            "Phường Trung Mỹ Tây",
+            "Phường Tân Hưng Thuận",
+            "Phường Đông Hưng Thuận",
+            "Phường Tân Thới Nhất",
+          ],
+        },
+
+        {
+          district: "Huyện Củ Chi",
+          ward: [
+            "Thị trấn Củ Chi",
+            "Xã Phú Mỹ Hưng",
+            "Xã An Phú",
+            "Xã Trung Lập Thượng",
+            "Xã An Nhơn Tây",
+            "Xã Nhuận Đức",
+            "Xã Phạm Văn Cội",
+            "Xã Phú Hòa Đông",
+            "Xã Trung Lập Hạ",
+            "Xã Trung An",
+            "Xã Phước Thạnh",
+            "Xã Phước Hiệp",
+            "Xã Tân An Hội",
+            "Xã Phước Vĩnh An",
+            "Xã Thái Mỹ",
+            "Xã Tân Thạnh Tây",
+            "Xã Hòa Phú",
+            "Xã Tân Thạnh Đông",
+            "Xã Bình Mỹ",
+            "Xã Tân Phú Trung",
+            "Xã Tân Thông Hội",
+          ],
+        },
+        {
+          district: "Huyện Bình Chánh",
+          ward: [
+            "Thị trấn Tân Túc",
+            "Xã Phạm Văn Hai",
+            "Xã Vĩnh Lộc A",
+            "Xã Vĩnh Lộc B",
+            "Xã Bình Lợi",
+            "Xã Lê Minh Xuân",
+            "Xã Tân Nhựt",
+            "Xã Tân Kiên",
+            "Xã Bình Hưng",
+            "Xã Phong Phú",
+            "Xã An Phú Tây",
+            "Xã Hưng Long",
+            "Xã Đa Phước",
+            "Xã Tân Quý Tây",
+            "Xã Bình Chánh",
+            "Xã Quy Đức",
+          ],
+        },
+
+        {
+          district: "Huyện Cần Giờ",
+          ward: [
+            "Thị trấn Cần Thạnh",
+            "Xã Bình Khánh",
+            "Xã Tam Thôn Hiệp",
+            "Xã An Thới Đông",
+            "Xã Thạnh An",
+            "Xã Long Hòa",
+            "Xã Lý Nhơn",
+          ],
+        },
+      ],
+    },
+    {
+      city: "Hà Nội",
+
+      districts: [
+        {
+          district: "Quận Hoàn Kiếm",
+          ward: [
+            "Phường 08",
+            "Phường 02",
+            "Phường 01",
+            "Phường 03",
+            "Phường 11",
+            "Phường 09",
+            "Phường 10",
+            "Phường 04",
+            "Phường 13",
+            "Phường 12",
+            "Phường 05",
+            "Phường 14",
+            "Phường 06",
+            "Phường 15",
+            "Phường 16",
+            "Phường 07",
+          ],
+        },
+      ],
+    },
+  ];
+
+  const city = document.querySelector('select[name="city"]');
+  const district = document.querySelector('select[name="district"]');
+  const ward = document.querySelector('select[name="ward"]');
+
+  const apartment = document.getElementById("apartment");
+  const house = document.getElementById("house");
+  const ground = document.getElementById("ground");
+
+  let notibar = document.getElementById("style-switcher");
+  let notibar__content = document.getElementById("notification__value");
+
+  city.innerHTML = `<select name="city" id="city" onchange="changeCity()">
     <option value="" disabled selected>Chọn thành phố</option>
     ${data.map((item) => `<option value="${item.city}">${item.city}</option>`)}
   </select>`;
 
-        const changeCityF = () => {
-            const cityChoose = data.find((element) => element.city === city.value);
+  const changeCityF = async () => {
+    const cityChoose = await data.find(
+      (element) => element.city === city.value
+    );
 
-            if (city.value !== "") {
-                district.innerHTML = `<select name="district" id="district">
+    if (city.value !== "") {
+      district.innerHTML = `<select name="district" id="district">
         <option value="" disabled selected>Chọn quận/huyện</option>
       ${cityChoose.districts.map(
         (item) => `<option value="${item.district}">${item.district}</option>`
       )}
   </select>`;
-            }
-        };
+    }
+  };
 
-        const changeDistrictF = () => {
-            if (district.value !== "") {
-                const cityChoose = data.find((element) => element.city === city.value);
-                const districtChoose = cityChoose.districts.find(
-                    (element) => element.district === district.value
-                );
+  const changeDistrictF = async () => {
+    if (district.value !== "") {
+      const cityChoose = await data.find(
+        (element) => element.city === city.value
+      );
+      const districtChoose = await cityChoose.districts.find(
+        (element) => element.district === district.value
+      );
 
-                ward.innerHTML = `<select name="ward" id="ward">
+      ward.innerHTML = `<select name="ward" id="ward">
         <option value="" disabled selected>Chọn phường/xã</option>
       ${districtChoose.ward.map(
         (item) => `<option value="${item}">${item}</option>`
       )}
   </select>`;
-            }
-        };
-        changeCityF();
-        changeDistrictF();
+    }
+  };
+  changeCityF();
+  changeDistrictF();
 
-        const changeCity = () => {
-            changeCityF();
-            changeDistrictF();
-            ward.innerHTML = `<select name="ward" id="ward">
+  const changeCity = async () => {
+    await changeCityF();
+    await changeDistrictF();
+    ward.innerHTML = `<select name="ward" id="ward">
         <option value="" disabled selected>Chọn phường/xã</option>
         <option value="" disabled>Vui lòng chọn quận/huyện trước</option>
         </select>`;
-        };
+  };
 
-        const changeDistrict = () => {
-            changeDistrictF();
-        };
-    </script>
+  const changeDistrict = async () => {
+    await changeDistrictF();
+  };
 
-    <!-- Side footer -->
-    <footer class="footer footer-light-left">
-        <div class="container">
-            <div class="columns is-vcentered">
-                <div class="column is-2">
-                    <div class="mb-20" style="display: flex; justify-content: center">
-                        <img class="small-footer-logo" src="assets\img\finhomes\logos\logo\Copy_of_FinHome.vn_2021_official_logo-removebg.png" alt="" />
-                    </div>
-                    <div style="display: flex; justify-content: center">
-                        <a href=" https://www.facebook.com/FinHomes.vn" class="level-item">
-                            <span class="icon"><i class="fa fa-facebook"></i></span>
-                        </a>
-                        <a href="https://www.linkedin.com/company/finhomevn/" class="level-item">
-                            <span class="icon"><i class="fa fa-linkedin"></i></span>
-                        </a>
-                    </div>
-                </div>
-                <div class="column">
-                    <div class="footer-nav-right">
-                        <a class="footer-nav-link" href="#">Home</a>
-                        <a class="footer-nav-link" href="#">Về chúng tôi</a>
-                        <a class="footer-nav-link" href="http://m.me/finhomes.vn">
-                            <span style="margin-left: 5px">http://m.me/finhomes.vn</span></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-    <!-- /Side footer -->
-    <!-- Side navigation -->
-    <div class="side-navigation-menu">
-        <!-- Categories menu -->
-        <div class="category-menu-wrapper">
-            <!-- Menu -->
-            <ul class="categories">
-                <li class="square-logo"><img src="assets/img/logos/square-white.svg" alt=""></li>
-                <li class="category-link is-active" data-navigation-menu="demo-pages"><i class="sl sl-icon-layers"></i></li>
-                <li class="category-link" data-navigation-menu="onepagers"><i class="sl sl-icon-docs"></i></li>
-                <li class="category-link" data-navigation-menu="components"><i class="sl sl-icon-grid"></i></li>
-            </ul>
-            <!-- Menu -->
+  //                       FORMAT RENT NUMBER                   //
 
-            <ul class="author">
-                <li>
-                    <!-- Theme author -->
-                    <a href="https://cssninja.io" target="_blank">
-                        <img class="main-menu-author" src="assets/img/logos/cssninja.svg" alt="">
-                    </a>
-                </li>
-            </ul>
-        </div>
-        <!-- /Categories menu -->
+  // format number
+  function formatPrice(price) {
+    return new Intl.NumberFormat("vi-VN", {
+      style: "decimal",
+    }).format(price);
+  }
 
-        <!-- Navigation menu -->
-        <div id="demo-pages" class="navigation-menu-wrapper animated preFadeInRight fadeInRight">
-            <!-- Navigation Header -->
-            <div class="navigation-menu-header">
-                <span>Demo pages</span>
-                <a class="ml-auto hamburger-btn navigation-close" href="javascript:void(0);">
-                    <span class="menu-toggle">
-                    <span class="icon-box-toggle">
-                        <span class="rotate">
-                            <i class="icon-line-top"></i>
-                            <i class="icon-line-center"></i>
-                            <i class="icon-line-bottom"></i>
-                        </span>
-                    </span>
-                    </span>
-                </a>
-            </div>
-            <!-- Navigation Body -->
-            <ul class="navigation-menu">
-                <li class="has-children"><a class="parent-link" href="#"><span class="material-icons">weekend</span>Agency kit</a>
-                    <ul>
-                        <li><a class="is-submenu" href="/agency-home.html">Homepage</a></li>
-                        <li><a class="is-submenu" href="/agency-about.html">About</a></li>
-                        <li><a class="is-submenu" href="/agency-portfolio.html">Portfolio</a></li>
-                        <li><a class="is-submenu" href="/agency-contact.html">Contact</a></li>
-                        <li><a class="is-submenu" href="/agency-blog.html">Blog</a></li>
-                        <li><a class="is-submenu" href="/agency-post-nosidebar.html">Post no sidebar</a></li>
-                    </ul>
-                </li>
-                <li class="has-children"><a class="parent-link" href="#"><span class="material-icons">wb_incandescent</span>Startup kit</a>
-                    <ul>
-                        <li><a class="is-submenu" href="/startup-landing.html">Homepage</a></li>
-                        <li><a class="is-submenu" href="/startup-about.html">About</a></li>
-                        <li><a class="is-submenu" href="/startup-product.html">Product</a></li>
-                        <li><a class="is-submenu" href="/startup-contact.html">Contact</a></li>
-                        <li><a class="is-submenu" href="/startup-login.html">Login</a></li>
-                        <li><a class="is-submenu" href="/startup-signup.html">Sign up</a></li>
-                    </ul>
-                </li>
-                <li class="has-children"><a class="parent-link" href="#"><span class="material-icons">apps</span>Landing kit 1</a>
-                    <ul>
-                        <li><a class="is-submenu" href="/kit1-landing.html">Landing page v1</a></li>
-                        <li><a class="is-submenu" href="/kit1-landing-2.html">Landing page v2</a></li>
-                        <li><a class="is-submenu" href="/kit1-landing-3.html">Landing page v3</a></li>
-                        <li><a class="is-submenu" href="/kit1-landing-4.html">Landing page v4</a></li>
-                        <li><a class="is-submenu" href="/kit1-landing-5.html">Landing page v5</a></li>
-                        <li><a class="is-submenu" href="/kit1-landing-6.html">Landing page v6</a></li>
-                        <li><a class="is-submenu" href="/kit1-landing-7.html">Landing page v7</a></li>
-                        <li><a class="is-submenu" href="/kit1-landing-8.html">Landing page v8</a></li>
-                        <li><a class="is-submenu" href="/kit1-features.html">Features v1</a></li>
-                        <li><a class="is-submenu" href="/kit1-features-2.html">Features v2</a></li>
-                        <li><a class="is-submenu" href="/kit1-pricing.html">Pricing page</a></li>
-                        <li><a class="is-submenu" href="/kit1-login.html">Login page</a></li>
-                        <li><a class="is-submenu" href="/kit1-signup.html">Signup page</a></li>
-                    </ul>
-                </li>
-                <li class="has-children"><a class="parent-link" href="#"><span class="material-icons">timelapse</span>Landing kit 2</a>
-                    <ul>
-                        <li><a class="is-submenu" href="/kit2-landing.html">Landing page v1</a></li>
-                        <li><a class="is-submenu" href="/kit2-landing-2.html">Landing page v2</a></li>
-                        <li><a class="is-submenu" href="/kit2-landing-3.html">Landing page v3</a></li>
-                        <li><a class="is-submenu" href="/kit2-landing-4.html">Landing page v4</a></li>
-                        <li><a class="is-submenu" href="/kit2-landing-5.html">Landing page v5</a></li>
-                        <li><a class="is-submenu" href="/kit2-landing-6.html">Landing page v6</a></li>
-                        <li><a class="is-submenu" href="/kit2-landing-7.html">Landing page v7</a></li>
-                        <li><a class="is-submenu" href="/kit2-landing-8.html">Landing page v8</a></li>
-                        <li><a class="is-submenu" href="/kit2-landing-9.html">Landing page v9</a></li>
-                        <li><a class="is-submenu" href="/kit2-landing-10.html">Landing page v10</a></li>
-                        <li><a class="is-submenu" href="/kit2-landing-11.html">Landing page v11</a></li>
-                        <li><a class="is-submenu" href="/kit2-features.html">Features v1</a></li>
-                        <li><a class="is-submenu" href="/kit2-features-2.html">Features v2</a></li>
-                        <li><a class="is-submenu" href="/kit2-pricing.html">Pricing page</a></li>
-                        <li><a class="is-submenu" href="/kit2-login.html">Login page</a></li>
-                        <li><a class="is-submenu" href="/kit2-signup.html">Signup page</a></li>
-                    </ul>
-                </li>
-                <li class="has-children"><a class="parent-link" href="#"><span class="material-icons">assistant</span>Landing kit 3</a>
-                    <ul>
-                        <li><a class="is-submenu" href="/kit3-landing.html">Landing page v1</a></li>
-                        <li><a class="is-submenu" href="/kit3-landing-2.html">Landing page v2</a></li>
-                        <li><a class="is-submenu" href="/kit3-features.html">Feature page</a></li>
-                        <li><a class="is-submenu" href="/kit3-pricing.html">Pricing page</a></li>
-                        <li><a class="is-submenu" href="/kit3-login.html">Login page</a></li>
-                        <li><a class="is-submenu" href="/kit3-signup.html">Signup page</a></li>
-                    </ul>
-                </li>
-                <li class="has-children"><a class="parent-link" href="#"><span class="material-icons">brightness_2</span>Landing kit 4</a>
-                    <ul>
-                        <li><a class="is-submenu" href="/kit4-landing.html">Landing page</a></li>
-                        <li><a class="is-submenu" href="/kit4-pricing.html">Pricing page</a></li>
-                        <li><a class="is-submenu" href="/kit4-help.html">Help center</a></li>
-                        <li><a class="is-submenu" href="/kit4-help-category.html">Help category</a></li>
-                        <li><a class="is-submenu" href="/kit4-help-article.html">Help article</a></li>
-                        <li><a class="is-submenu" href="/kit4-signup.html">Sign Up</a></li>
-                        <li><a class="is-submenu" href="/kit4-login.html">Login</a></li>
-                    </ul>
-                </li>
-                <li class="has-children"><a class="parent-link" href="#"><span class="material-icons">toys</span>Landing kit 5</a>
-                    <ul>
-                        <li><a class="is-submenu" href="/kit5-landing.html">Landing page</a></li>
-                        <li><a class="is-submenu" href="/kit5-features.html">Feature page</a></li>
-                        <li><a class="is-submenu" href="/kit5-pricing.html">Pricing Page</a></li>
-                        <li><a class="is-submenu" href="/kit5-login.html">Login / Signup</a></li>
-                    </ul>
-                </li>
-                <li class="has-children"><a class="parent-link" href="#"><span class="material-icons">mouse</span>Landing kit 6</a>
-                    <ul>
-                        <li><a class="is-submenu" href="kit6-landing.html">Landing page</a></li>
-                        <li><a class="is-submenu" href="kit6-login.html">Login page</a></li>
-                        <li><a class="is-submenu" href="kit6-signup.html">Signup page</a></li>
-                    </ul>
-                </li>
-                <li class="has-children"><a class="parent-link" href="#"><span class="material-icons">work</span>Landing kit
-                        7</a>
-                    <ul>
-                        <li><a class="is-submenu" href="/kit7-landing.html">Landing page</a></li>
-                        <li><a class="is-submenu" href="/kit7-landing-alt.html">Landing page v2</a></li>
-                        <li><a class="is-submenu" href="/kit7-landing-3.html">Landing page v3</a></li>
-                        <li><a class="is-submenu" href="/kit7-landing-4.html">Landing page v4</a></li>
-                        <li><a class="is-submenu" href="/kit7-landing-5.html">Landing page v5</a></li>
-                        <li><a class="is-submenu" href="/kit7-authentication.html">Auth page</a></li>
-                        <li><a class="is-submenu" href="/kit7-pricing.html">Pricing page</a></li>
-                    </ul>
-                </li>
-                <li class="has-children">
-                    <a class="parent-link" href="#">
-                        <span class="material-icons">public</span>Landing kit 8</a>
-                    <ul>
-                        <li><a class="is-submenu" href="/kit8-landing.html">Landing page v1</a></li>
-                        <li><a class="is-submenu" href="/kit8-landing-1.html">Landing page v2</a></li>
-                        <li><a class="is-submenu" href="/kit8-landing-2.html">Landing page v3</a></li>
-                        <li><a class="is-submenu" href="/kit8-landing-3.html">Landing page v4</a></li>
-                        <li><a class="is-submenu" href="/kit8-landing-4.html">Landing page v5</a></li>
-                        <li><a class="is-submenu" href="/kit8-landing-5.html">Landing page v6</a></li>
-                        <li><a class="is-submenu" href="/kit8-landing-6.html">Landing page v7</a></li>
-                        <li><a class="is-submenu" href="/kit8-pricing.html">Pricing page</a></li>
-                        <li><a class="is-submenu" href="/kit8-jobs.html">Jobs page</a></li>
-                        <li><a class="is-submenu" href="/kit8-login.html">Login page</a></li>
-                        <li><a class="is-submenu" href="/kit8-signup.html">Signup page</a></li>
-                    </ul>
-                </li>
-                <li class="has-children">
-                    <a class="parent-link" href="#">
-                        <span class="material-icons">assessment</span>Landing kit 9</a>
-                    <ul>
-                        <li><a class="is-submenu" href="/kit9-landing.html">Landing page v1</a></li>
-                        <li><a class="is-submenu" href="/kit9-landing-2.html">Landing page v2</a></li>
-                        <li><a class="is-submenu" href="/kit9-landing-3.html">Landing page v3</a></li>
-                        <li><a class="is-submenu" href="/kit9-landing-4.html">Landing page v4</a></li>
-                    </ul>
-                </li>
-                <li class="has-children">
-                    <a class="parent-link" href="#">
-                        <span class="material-icons">account_balance</span>Landing kit 10</a>
-                    <ul>
-                        <li><a class="is-submenu" href="/kit10-landing.html">Landing page v1</a></li>
-                        <li><a class="is-submenu" href="/kit10-landing-2.html">Landing page v2</a></li>
-                        <li><a class="is-submenu" href="/kit10-landing-3.html">Landing page v3</a></li>
-                    </ul>
-                </li>
-                <li class="has-children">
-                    <a class="parent-link" href="#">
-                        <span class="material-icons">shop</span>Landing kit 11</a>
-                    <ul>
-                        <li><a class="is-submenu" href="/kit11-landing.html">Landing page v1</a></li>
-                        <li><a class="is-submenu" href="/kit11-landing-2.html">Landing page v2</a></li>
-                        <li><a class="is-submenu" href="/kit11-landing-3.html">Landing page v3</a></li>
-                        <li><a class="is-submenu" href="/kit11-landing-4.html">Landing page v4</a></li>
-                        <li><a class="is-submenu" href="/kit11-landing-5.html">Landing page v5</a></li>
-                        <li><a class="is-submenu" href="/kit11-landing-6.html">Landing page v6</a></li>
-                        <li><a class="is-submenu" href="/kit11-landing-7.html">Landing page v7</a></li>
-                        <li><a class="is-submenu" href="/kit11-landing-8.html">Landing page v8</a></li>
-                    </ul>
-                </li>
-                <li class="has-children">
-                    <a class="parent-link" href="#">
-                        <span class="material-icons">stars</span>Landing kit 12</a>
-                    <ul>
-                        <li><a class="is-submenu" href="/kit12-landing.html">Landing page v1</a></li>
-                        <li><a class="is-submenu" href="/kit12-landing-2.html">Landing page v2</a></li>
-                        <li><a class="is-submenu" href="/kit12-landing-3.html">Landing page v3</a></li>
-                        <li><a class="is-submenu" href="/kit12-landing-4.html">Landing page v4</a></li>
-                    </ul>
-                </li>
-                <li class="has-children">
-                    <a class="parent-link" href="#">
-                        <span class="material-icons">new_releases</span>Landing kit 13</a>
-                    <ul>
-                        <li><a class="is-submenu" href="/kit13-landing.html">Landing page v1</a></li>
-                        <li><a class="is-submenu" href="/kit13-landing-2.html">Landing page v2</a></li>
-                    </ul>
-                </li>
-                <li class="has-children">
-                    <a class="parent-link" href="#">
-                        <span class="material-icons">code</span>Landing kit 14</a>
-                    <ul>
-                        <li><a class="is-submenu" href="/kit14-landing.html">Landing page v1</a></li>
-                        <li><a class="is-submenu" href="/kit14-landing-2.html">Landing page v2</a></li>
-                        <li><a class="is-submenu" href="/kit14-landing-3.html">Landing page v3</a></li>
-                    </ul>
-                </li>
-                <li class="has-children">
-                    <a class="parent-link" href="#">
-                        <span class="material-icons">settings</span>Landing kit 15</a>
-                    <ul>
-                        <li><a class="is-submenu" href="/kit15-landing.html">Landing page v1</a></li>
-                        <li><a class="is-submenu" href="/kit15-landing-2.html">Landing page v2</a></li>
-                        <li><a class="is-submenu" href="/kit15-landing-3.html">Landing page v3</a></li>
-                        <li><a class="is-submenu" href="/kit15-landing-4.html">Landing page v4</a></li>
-                        <li><a class="is-submenu" href="/kit15-landing-5.html">Landing page v5</a></li>
-                        <li><a class="is-submenu" href="/kit15-landing-6.html">Landing page v6</a></li>
-                        <li><a class="is-submenu" href="/kit15-about.html">About page</a></li>
-                        <li><a class="is-submenu" href="/kit15-contact.html">Contact page</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
-        <!-- Navigation menu -->
-        <div id="onepagers" class="navigation-menu-wrapper animated preFadeInRight fadeInRight is-hidden">
-            <!-- Navigation Header -->
-            <div class="navigation-menu-header">
-                <span>Sub Pages</span>
-                <a class="ml-auto hamburger-btn navigation-close" href="javascript:void(0);">
-                    <span class="menu-toggle">
-                    <span class="icon-box-toggle">
-                        <span class="rotate">
-                            <i class="icon-line-top"></i>
-                            <i class="icon-line-center"></i>
-                            <i class="icon-line-bottom"></i>
-                        </span>
-                    </span>
-                    </span>
-                </a>
-            </div>
-            <!-- Navigation body -->
-            <ul class="navigation-menu">
-                <li class="has-children"><a class="parent-link has-new" href="#"><span class="material-icons">shopping_cart</span>Commerce</a>
-                    <ul>
-                        <li><a class="is-submenu" href="/commerce-home.html">Shop Home</a></li>
-                        <li><a class="is-submenu" href="/commerce-product-landing.html">Product landing v1</a></li>
-                        <li><a class="is-submenu" href="/commerce-product-landing-2.html">Product landing v2</a></li>
-                        <li><a class="is-submenu" href="/commerce-product-1.html">Product page</a></li>
-                        <li><a class="is-submenu" href="/commerce-cart.html">Cart page</a></li>
-                        <li><a class="is-submenu" href="/commerce-payment-flow.html">Checkout page</a></li>
-                    </ul>
-                </li>
-                <li class="has-children"><a class="parent-link has-new" href="#"><span class="material-icons">domain</span>Company</a>
-                    <ul>
-                        <li><a class="is-submenu" href="/about-page-1.html">About v1</a></li>
-                        <li><a class="is-submenu" href="/about-page-2.html">About v2</a></li>
-                        <li><a class="is-submenu" href="/case-study-1.html">Case Study v1</a></li>
-                    </ul>
-                </li>
-                <li class="has-children"><a class="parent-link has-new" href="#"><span class="material-icons">call</span>Contact</a>
-                    <ul>
-                        <li><a class="is-submenu" href="/contact-page-1.html">Contact v1</a></li>
-                        <li><a class="is-submenu" href="/contact-page-2.html">Contact v2</a></li>
-                        <li><a class="is-submenu" href="/contact-page-3.html">Contact v3</a></li>
-                        <li><a class="is-submenu" href="/contact-page-4.html">Contact v4</a></li>
-                        <li><a class="is-submenu" href="/contact-page-5.html">Contact v5</a></li>
-                    </ul>
-                </li>
-                <li class="has-children"><a class="parent-link has-new" href="#"><span class="material-icons">book</span>Blog</a>
-                    <ul>
-                        <li><a class="is-submenu" href="/blog-posts-full.html">Posts List v1</a></li>
-                        <li><a class="is-submenu" href="/blog-posts-full-alt.html">Posts List v2</a></li>
-                        <li><a class="is-submenu" href="/blog-posts-side.html">Posts List v3</a></li>
-                        <li><a class="is-submenu" href="/blog-posts-side-alt.html">Posts List v4</a></li>
-                        <li><a class="is-submenu" href="/blog-posts-grid-full.html">Posts Grid v1</a></li>
-                        <li><a class="is-submenu" href="/blog-posts-grid-full-masonry.html">Posts Grid v2</a></li>
-                        <li><a class="is-submenu" href="/blog-posts-grid-side.html">Posts Grid v3</a></li>
-                        <li><a class="is-submenu" href="/blog-posts-grid-side-masonry.html">Posts Grid v4</a></li>
-                        <li><a class="is-submenu" href="/blog-single-full.html">Single Post V1</a></li>
-                        <li><a class="is-submenu" href="/blog-single-side.html">Single Post V2</a></li>
-                    </ul>
-                </li>
-                <li class="has-children">
-                    <a class="parent-link has-new" href="#"><span class="material-icons">highlight</span>Error Pages</a>
-                    <ul>
-                        <li><a class="is-submenu" href="/error-1.html">Error v1</a></li>
-                        <li><a class="is-submenu" href="/error-2.html">Error v2</a></li>
-                        <li><a class="is-submenu" href="/error-3.html">Error v3</a></li>
-                        <li><a class="is-submenu" href="/error-4.html">Error v4</a></li>
-                        <li><a class="is-submenu" href="/error-5.html">Error v5</a></li>
-                        <li><a class="is-submenu" href="/error-6.html">Error v6</a></li>
-                        <li><a class="is-submenu" href="/error-7.html">Error v7</a></li>
-                        <li><a class="is-submenu" href="/error-8.html">Error v8</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
-        <!-- Navigation menu -->
-        <div id="components" class="navigation-menu-wrapper animated preFadeInRight fadeInRight is-hidden">
-            <!-- Navigation Header -->
-            <div class="navigation-menu-header">
-                <span>Components</span>
-                <a class="ml-auto hamburger-btn navigation-close" href="javascript:void(0);">
-                    <span class="menu-toggle">
-                    <span class="icon-box-toggle">
-                        <span class="rotate">
-                            <i class="icon-line-top"></i>
-                            <i class="icon-line-center"></i>
-                            <i class="icon-line-bottom"></i>
-                        </span>
-                    </span>
-                    </span>
-                </a>
-            </div>
-            <!-- Navigation body -->
-            <ul class="navigation-menu">
-                <li class="has-children"><a class="parent-link" href="#"><span class="material-icons">view_quilt</span>Layout</a>
-                    <ul>
-                        <li><a class="is-submenu" href="/_components-layout-grid.html">Grid system</a></li>
-                        <li><a class="is-submenu" href="/_components-layout-video.html">Video background</a></li>
-                        <li><a class="is-submenu" href="/_components-layout-parallax.html">Parallax</a></li>
-                        <li><a class="is-submenu" href="/_components-layout-headers.html">Headers</a></li>
-                        <li><a class="is-submenu" href="/_components-layout-footers.html">Footers</a></li>
-                        <li><a class="is-submenu" href="/_components-layout-typography.html">Typography</a></li>
-                        <li><a class="is-submenu" href="/_components-layout-colors.html">Colors</a></li>
-                    </ul>
-                </li>
-                <li class="has-children"><a class="parent-link" href="#"><span class="material-icons">subject</span>Navbars</a>
-                    <ul>
-                        <li><a class="is-submenu" href="/_components-layout-navbar-fade-light.html">Fade light</a></li>
-                        <li><a class="is-submenu" href="/_components-layout-navbar-fade-dark.html">Fade dark</a></li>
-                        <li><a class="is-submenu" href="/_components-layout-navbar-static-light.html">Static
-                                light</a></li>
-                        <li><a class="is-submenu" href="/_components-layout-navbar-static-dark.html">Static
-                                dark</a></li>
-                        <li><a class="is-submenu" href="/_components-layout-navbar-static-solid.html">Static
-                                solid</a></li>
-                        <li><a class="is-submenu" href="/_components-layout-navbar-double-dark.html">Double
-                                dark</a></li>
-                        <li><a class="is-submenu" href="/_components-layout-navbar-double-light.html">Double
-                                light</a></li>
-                    </ul>
-                </li>
-                <li class="has-children"><a class="parent-link" href="#"><span class="material-icons">view_stream</span>Sections</a>
-                    <ul>
-                        <li><a class="is-submenu" href="/_components-sections-features.html">Features</a></li>
-                        <li><a class="is-submenu" href="/_components-sections-pricing.html">Pricing</a></li>
-                        <li><a class="is-submenu" href="/_components-sections-team.html">Team</a></li>
-                        <li><a class="is-submenu" href="/_components-sections-testimonials.html">Testimonials</a></li>
-                        <li><a class="is-submenu" href="/_components-sections-clients.html">Clients</a></li>
-                        <li><a class="is-submenu" href="/_components-sections-counters.html">Counters</a></li>
-                        <li><a class="is-submenu" href="/_components-sections-carousel.html">Carousel</a></li>
-                    </ul>
-                </li>
-                <li class="has-children"><a class="parent-link" href="#"><span class="material-icons">playlist_add_check</span>Basic
-                        UI</a>
-                    <ul>
-                        <li><a class="is-submenu" href="/_components-basicui-cards.html">Cards</a></li>
-                        <li><a class="is-submenu" href="/_components-basicui-buttons.html">Buttons</a></li>
-                        <li><a class="is-submenu" href="/_components-basicui-dropdowns.html">Dropdowns</a></li>
-                        <li><a class="is-submenu" href="/_components-basicui-lists.html">Lists</a></li>
-                        <li><a class="is-submenu" href="/_components-basicui-modals.html">Modals</a></li>
-                        <li><a class="is-submenu" href="/_components-basicui-tabs.html">Tabs & pills</a></li>
-                        <li><a class="is-submenu" href="/_components-basicui-accordion.html">Accordions</a></li>
-                        <li><a class="is-submenu" href="/_components-basicui-badges.html">Badges & labels</a></li>
-                        <li><a class="is-submenu" href="/_components-basicui-popups.html">Popups</a></li>
-                    </ul>
-                </li>
-                <li class="has-children"><a class="parent-link" href="#"><span class="material-icons">playlist_add</span>Advanced
-                        UI</a>
-                    <ul>
-                        <li><a class="is-submenu" href="/_components-advancedui-tables.html">Tables</a></li>
-                        <li><a class="is-submenu" href="/_components-advancedui-timeline.html">Timeline</a></li>
-                        <li><a class="is-submenu" href="/_components-advancedui-boxes.html">Boxes</a></li>
-                        <li><a class="is-submenu" href="/_components-advancedui-messages.html">Messages</a></li>
-                        <li><a class="is-submenu" href="/_components-advancedui-megamenu.html">Megamenu</a></li>
-                        <li><a class="is-submenu" href="/_components-advancedui-calendar.html">Calendar</a></li>
-                    </ul>
-                </li>
-                <li class="has-children"><a class="parent-link" href="#"><span class="material-icons">check_box</span>Forms</a>
-                    <ul>
-                        <li><a class="is-submenu" href="/_components-forms-inputs.html">Inputs</a></li>
-                        <li><a class="is-submenu" href="/_components-forms-controls.html">Controls</a></li>
-                        <li><a class="is-submenu" href="/_components-forms-layouts.html">Form layouts</a></li>
-                        <li><a class="is-submenu" href="/_components-forms-steps.html">Step forms</a></li>
-                        <li><a class="is-submenu" href="/_components-forms-uploader.html">Uploader</a></li>
-                    </ul>
-                </li>
-                <li class="has-children"><a class="parent-link" href="#"><span class="material-icons">adjust</span>Icons</a>
-                    <ul>
-                        <li><a class="is-submenu" href="/_components-icons-im.html">Icons Mind</a></li>
-                        <li><a class="is-submenu" href="/_components-icons-sl.html">Simple Line Icons</a></li>
-                        <li><a class="is-submenu" href="/_components-icons-fa.html">Font Awesome</a></li>
-                        <li><a class="is-submenu" href="https://material.io/icons/" target="_blank">Material Icons</a></li>
-                        <li><a class="is-submenu" href="/_components-extensions-iconpicker.html">Icon Picker</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
-        <!-- /Navigation menu -->
-    </div>
-    <!-- /Side navigation -->
-    <!-- Back To Top Button -->
-    <div id="backtotop"><a href="#"></a></div>
+  let oldValue = "";
 
-    <script src="assets/js/app.js"></script>
-    <script src="assets/js/core.js"></script>
-</body>
+  // format price
+  const handleInputRent = async () => {
+    let reg = new RegExp("^\\d+$");
+    let inputRent = await document.getElementById("rentPrice");
+    let str = inputRent.value.replace(/\D/g, "");
+    if (reg.test(str)) {
+      oldValue = str;
+      inputRent.value = formatPrice(str);
+    } else {
+      if (inputRent.value === "") {
+        inputRent.value = "";
+        oldValue = "";
+      } else {
+        inputRent.value = formatPrice(oldValue);
+      }
+    }
+  };
 
-</html>
+  //                              FORM                               //
+
+  // form validate get infomation
+  const validateForm = () => {
+    if (city.value === "" || district.value === "" || ward.value === "") {
+      notibar__content.innerText = "Vui lòng điền đầy đủ các trường";
+      notibar.classList.remove("away");
+      setTimeout(handleCloseNoti, 7000);
+      return false;
+    }
+
+    if (!(apartment.checked || house.checked || ground.checked)) {
+      notibar__content.innerText = "Vui lòng chọn loại bất động sản cho thuê";
+      notibar.classList.remove("away");
+      setTimeout(handleCloseNoti, 7000);
+      return false;
+    }
+
+    if (notibar.classList.contains("away")) {
+      notibar__content.innerText =
+        "FinHomes đã nhận được yêu cầu của bạn. Trân trọng kính chào";
+      notibar.classList.remove("away");
+      setTimeout(handleCloseNoti, 7000);
+    }
+
+    document.getElementById("getInformationForm").reset();
+
+    // if you want form working change this
+
+    // ---- do something...
+
+    return false;
+    //
+  };
+
+  // validate form get phone number
+  const validatePhoneForm = () => {
+    if (notibar.classList.contains("away")) {
+      notibar__content.innerText =
+        "FinHomes đã nhận được yêu cầu của bạn. Trân trọng kính chào";
+      notibar.classList.remove("away");
+      setTimeout(handleCloseNoti, 7000);
+    }
+
+    document.getElementById("getPhoneForm").reset();
+
+    // if you want form working  this
+
+    // ---- do something...
+
+    return false;
+    //
+  };
+
+  // handle close notification bar
+  const handleCloseNoti = () => {
+    if (!notibar.classList.contains("away")) {
+      notibar__content.innerText = "";
+      notibar.classList += " away ";
+    }
+  };
+</script>
+
+{{> footer-side-light}}
